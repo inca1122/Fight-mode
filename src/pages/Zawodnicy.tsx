@@ -76,7 +76,7 @@ export default function Zawodnicy() {
                 <span className="fc-bg-name">{fighter.lastName.toUpperCase()}</span>
                 <img
                   className="fc-img"
-                  src={`${BASE}images/fighters/${fighter.slug}.svg`}
+                  src={`${BASE}images/fighters/${fighter.slug}.png`}
                   alt={fullName}
                   loading="lazy"
                 />

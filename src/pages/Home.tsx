@@ -49,13 +49,23 @@ export default function Home() {
       {/* HERO */}
       <section className="hero" id="hero">
         <div className="hero__bg"></div>
-        <div className="hero__fighters">
-          <img className="hero__f l" src={`${BASE}images/fighters/sulecki.svg`} alt="" />
-          <img className="hero__f r" src={`${BASE}images/fighters/maksel.svg`} alt="" />
+
+        {/* People image — fades into dark background */}
+        <div className="hero__people">
+          <img src={`${BASE}images/people-main.jpg`} alt="" className="hero__people-img" />
         </div>
+
+        {/* Smoke rising from bottom */}
+        <div className="hero__smoke" aria-hidden="true">
+          <div className="smoke-layer smoke-1"></div>
+          <div className="smoke-layer smoke-2"></div>
+          <div className="smoke-layer smoke-3"></div>
+          <div className="smoke-layer smoke-4"></div>
+        </div>
+
         <div className="hero__c">
           <div className="hero__badge">Fight Mode 2 &nbsp;·&nbsp; 23 Maja 2026 &nbsp;·&nbsp; Poznań</div>
-          <img className="hero__logo" src={`${BASE}images/hero-poster.svg`} alt="Fight Mode — Bare Knuckle Poland" />
+          <img className="hero__logo" src={`${BASE}images/logo.png`} alt="Fight Mode — Bare Knuckle Poland" />
           <div className="hero__sub">
             <strong>23 MAJA 2026</strong>
             <span className="sep">✦</span>
@@ -162,7 +172,7 @@ export default function Home() {
         <div className="fighters-grid">
           {FIGHTERS.slice(0, 4).map((fighter, i) => (
             <div key={fighter.id} className="fc rv sc" style={{ transitionDelay: `${i * 0.06}s` }}>
-              <img className="fc__img" src={`${BASE}images/fighters/${fighter.slug}.svg`} alt={`${fighter.firstName} ${fighter.lastName}`} loading="lazy" />
+              <img className="fc__img" src={`${BASE}images/fighters/${fighter.slug}.png`} alt={`${fighter.firstName} ${fighter.lastName}`} loading="lazy" />
               <div className="fc__ov"></div>
               <span className="fc__wt">{fighter.weightClass}</span>
               <div className="fc__info">

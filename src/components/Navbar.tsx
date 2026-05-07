@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <header className={`nav${scrolled ? ' s' : ''}`} id="nav">
       <Link to="/" className="nav__logo">
-        <img src={`${BASE}images/hero-poster.svg`} alt="Fight Mode — Bare Knuckle Poland" style={{ height: '42px', width: 'auto', objectFit: 'contain', filter: 'drop-shadow(0 0 12px rgba(255,80,0,.4))' }} />
+        <img src={`${BASE}images/logo.png`} alt="Fight Mode" />
       </Link>
 
       <ul className={`nav__links${open ? ' open' : ''}`}>
@@ -40,6 +40,7 @@ export default function Navbar() {
         </div>
         <a href="https://ebilet.pl" target="_blank" rel="noreferrer" className="btn-nb o">Kup Bilet</a>
         <Link to="/ppv" className="btn-nb r">PPV</Link>
+        <img src={`${BASE}images/F.jpg`} alt="" style={{ height: '36px', width: '36px', objectFit: 'cover', opacity: 0.9 }} />
       </div>
 
       <button className="hbg" id="hbg" aria-label="Menu" onClick={() => setOpen(v => !v)}>
