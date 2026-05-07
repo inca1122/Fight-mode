@@ -676,3 +676,76 @@ a{text-decoration:none;color:inherit}
 /* Ensure hero content is above smoke */
 .hero__c { z-index: 3; }
 .hero__hint { z-index: 3; }
+
+/* ── GLASS NAV PILL ── */
+.nav__glass {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav__glass-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 5px 6px;
+  overflow: hidden;
+}
+.nav__glass-links a {
+  display: block;
+  font-family: var(--fc);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.75);
+  padding: 7px 16px;
+  border-radius: 7px;
+  transition: background 0.22s ease, color 0.22s ease;
+  white-space: nowrap;
+}
+.nav__glass-links a:hover {
+  background: rgba(200,32,42,0.75);
+  color: #fff;
+}
+/* Hero background — restore red tones */
+.hero__bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 60%, rgba(160,20,0,.32) 0%, transparent 70%),
+    linear-gradient(180deg, #080808 0%, #120000 40%, #0a0000 100%);
+}
+/* Hero logo bigger */
+.hero__logo { width: clamp(280px,42vw,560px) !important; max-width: 88vw !important; }
+/* Hero text contrast fixes */
+.hero__badge {
+  background: rgba(0,0,0,0.55);
+  padding: 6px 22px;
+  border: 1px solid rgba(255,85,0,.35);
+}
+.hero__sub { text-shadow: 0 2px 12px rgba(0,0,0,0.9); }
+.cd-num { text-shadow: 0 2px 16px rgba(0,0,0,0.8); }
+/* People image — keep full opacity, people already have transparent bg */
+.hero__people-img {
+  opacity: 0.9 !important;
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 18%, black 80%, transparent 100%),
+                      linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to top, transparent 0%, black 18%, black 80%, transparent 100%),
+              linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+  -webkit-mask-composite: intersect;
+  mask-composite: intersect;
+  object-fit: contain;
+  object-position: bottom center;
+}
+/* Remove bg-name from fc-photo (already removed in JSX) */
+.fc-bg-name { display: none; }
+/* Fighter card photo bg — dark to match site */
+.fc-photo { background: #131418; }
+/* Zawodnicy fighter img — soften white fringe via multiply on dark bg */
+.fc-img { mix-blend-mode: normal; }
+@media(max-width:1024px) {
+  .nav__glass { display: none; }
+}

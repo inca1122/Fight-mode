@@ -73,12 +73,13 @@ export default function Zawodnicy() {
             >
               {/* Photo */}
               <div className="fc-photo">
-                <span className="fc-bg-name">{fighter.lastName.toUpperCase()}</span>
                 <img
                   className="fc-img"
                   src={`${BASE}images/fighters/${fighter.slug}.png`}
                   alt={fullName}
                   loading="lazy"
+                  style={{ mixBlendMode: 'luminosity' } as React.CSSProperties}
+                  onLoad={e => { (e.currentTarget as HTMLImageElement).style.mixBlendMode = 'normal'; }}
                 />
               </div>
 

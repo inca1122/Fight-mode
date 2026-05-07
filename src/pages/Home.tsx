@@ -65,7 +65,7 @@ export default function Home() {
 
         <div className="hero__c">
           <div className="hero__badge">Fight Mode 2 &nbsp;·&nbsp; 23 Maja 2026 &nbsp;·&nbsp; Poznań</div>
-          <img className="hero__logo" src={`${BASE}images/logo.png`} alt="Fight Mode — Bare Knuckle Poland" />
+          <img className="hero__logo" src={`${BASE}images/logo.png`} alt="Fight Mode — Bare Knuckle Poland" style={{ width: 'clamp(300px,45vw,600px)', maxWidth: '90vw' }} />
           <div className="hero__sub">
             <strong>23 MAJA 2026</strong>
             <span className="sep">✦</span>
@@ -202,42 +202,24 @@ export default function Home() {
           <Link to="/aktualnosci" style={{ fontFamily: 'var(--fc)', fontSize: '11px', fontWeight: 700, letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--orange)', whiteSpace: 'nowrap' }}>Wszystkie →</Link>
         </div>
         <div className="news-grid">
-          <article className="nc rv fb">
-            <div className="nc__imgw">
-              <div className="nc__ph" style={{ background: 'linear-gradient(135deg,#1a0000,#0d0d0d)' }}>FOTO: Maciej Sulęcki</div>
-              <span className="nc__cat">Zawodnik</span>
-            </div>
-            <div className="nc__body">
-              <div className="nc__meta">05 Maj 2026</div>
-              <h3 className="nc__title">Maciej „Striczu" Sulęcki wraca — tym razem na gołe pięści</h3>
-              <p className="nc__exc">Były mistrz świata w boksie podejmuje nowe wyzwanie. Poznań 23 maja zapowiada się gorąco.</p>
-              <a href="#" className="nc__lnk">Czytaj więcej <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </article>
-          <article className="nc rv fb" style={{ transitionDelay: '.1s' }}>
-            <div className="nc__imgw">
-              <div className="nc__ph" style={{ background: 'linear-gradient(135deg,#001a06,#0d0d0d)' }}>FOTO: Fight Mode 1 — Galeria</div>
-              <span className="nc__cat">Relacja</span>
-            </div>
-            <div className="nc__body">
-              <div className="nc__meta">28 Kwi 2026</div>
-              <h3 className="nc__title">Fight Mode 1 — relacja z inauguracyjnej gali</h3>
-              <p className="nc__exc">Pierwsza gala Fight Mode przeszła do historii polskiego sportu walki.</p>
-              <a href="#" className="nc__lnk">Czytaj więcej <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </article>
-          <article className="nc rv fb" style={{ transitionDelay: '.2s' }}>
-            <div className="nc__imgw">
-              <div className="nc__ph" style={{ background: 'linear-gradient(135deg,#00051a,#0d0d0d)' }}>FOTO: Fight Mode 2 — Plakat</div>
-              <span className="nc__cat">Wydarzenie</span>
-            </div>
-            <div className="nc__body">
-              <div className="nc__meta">15 Kwi 2026</div>
-              <h3 className="nc__title">Oficjalnie: Fight Mode 2 — 23 maja w Poznaniu!</h3>
-              <p className="nc__exc">Fight Mode powraca silniejszy niż kiedykolwiek. Bilety już dostępne przez ebilet.pl.</p>
-              <a href="#" className="nc__lnk">Czytaj więcej <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-            </div>
-          </article>
+          {[
+            { img: 'news2.jpg', cat: 'Zawodnik', date: '05 Maj 2026', title: 'Maciej „Striczu" Sulęcki wraca — tym razem na gołe pięści', exc: 'Były mistrz świata w boksie podejmuje nowe wyzwanie. Poznań 23 maja zapowiada się gorąco.' },
+            { img: 'news3.jpg', cat: 'Relacja',  date: '28 Kwi 2026', title: 'Fight Mode 1 — relacja z inauguracyjnej gali', exc: 'Pierwsza gala Fight Mode przeszła do historii polskiego sportu walki.' },
+            { img: 'news1.jpg', cat: 'Wydarzenie', date: '15 Kwi 2026', title: 'Oficjalnie: Fight Mode 2 — 23 maja w Poznaniu!', exc: 'Fight Mode powraca silniejszy niż kiedykolwiek. Bilety już dostępne przez ebilet.pl.' },
+          ].map((a, i) => (
+            <article key={i} className="nc rv fb" style={{ transitionDelay: `${i * 0.1}s` }}>
+              <div className="nc__imgw">
+                <img className="nc__img" src={`${BASE}images/${a.img}`} alt={a.title} loading="lazy" />
+                <span className="nc__cat">{a.cat}</span>
+              </div>
+              <div className="nc__body">
+                <div className="nc__meta">{a.date}</div>
+                <h3 className="nc__title">{a.title}</h3>
+                <p className="nc__exc">{a.exc}</p>
+                <a href="#" className="nc__lnk">Czytaj więcej <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              </div>
+            </article>
+          ))}
         </div>
       </section>
 

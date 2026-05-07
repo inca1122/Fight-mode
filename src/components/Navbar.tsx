@@ -15,17 +15,22 @@ export default function Navbar() {
 
   return (
     <header className={`nav${scrolled ? ' s' : ''}`} id="nav">
+      {/* Logo F1 — left */}
       <Link to="/" className="nav__logo">
-        <img src={`${BASE}images/logo.png`} alt="Fight Mode" />
+        <img src={`${BASE}images/F1.jpg`} alt="Fight Mode" style={{ height: '46px', width: '46px', objectFit: 'cover', borderRadius: '4px' }} />
       </Link>
 
-      <ul className={`nav__links${open ? ' open' : ''}`}>
-        <li><Link to="/zawodnicy" onClick={() => setOpen(false)}>Zawodnicy</Link></li>
-        <li><Link to="/karta-walk" onClick={() => setOpen(false)}>Karta Walk</Link></li>
-        <li><Link to="/aktualnosci" onClick={() => setOpen(false)}>Aktualności</Link></li>
-        <li><Link to="/ppv" onClick={() => setOpen(false)}>PPV</Link></li>
-      </ul>
+      {/* Glass pill nav links — center */}
+      <nav className="nav__glass">
+        <ul className={`nav__glass-links${open ? ' open' : ''}`}>
+          <li><Link to="/zawodnicy" onClick={() => setOpen(false)}>Zawodnicy</Link></li>
+          <li><Link to="/karta-walk" onClick={() => setOpen(false)}>Karta Walk</Link></li>
+          <li><Link to="/aktualnosci" onClick={() => setOpen(false)}>Aktualności</Link></li>
+          <li><Link to="/ppv" onClick={() => setOpen(false)}>PPV</Link></li>
+        </ul>
+      </nav>
 
+      {/* Right — socials + buttons only */}
       <div className="nav__r">
         <div className="nav__soc">
           <a href="https://www.youtube.com/@FightMode" target="_blank" rel="noreferrer" title="YouTube">
@@ -40,7 +45,6 @@ export default function Navbar() {
         </div>
         <a href="https://ebilet.pl" target="_blank" rel="noreferrer" className="btn-nb o">Kup Bilet</a>
         <Link to="/ppv" className="btn-nb r">PPV</Link>
-        <img src={`${BASE}images/F.jpg`} alt="" style={{ height: '36px', width: '36px', objectFit: 'cover', opacity: 0.9 }} />
       </div>
 
       <button className="hbg" id="hbg" aria-label="Menu" onClick={() => setOpen(v => !v)}>
