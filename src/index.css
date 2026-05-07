@@ -608,11 +608,10 @@ a{text-decoration:none;color:inherit}
 .hero__people-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: bottom center;
+  object-fit: cover;
+  object-position: center top;
   display: block;
   opacity: 1;
-  mix-blend-mode: multiply;
 }
 
 /* ── HERO SMOKE ── */
@@ -724,12 +723,11 @@ a{text-decoration:none;color:inherit}
 }
 .hero__sub { text-shadow: 0 2px 12px rgba(0,0,0,0.9); }
 .cd-num { text-shadow: 0 2px 16px rgba(0,0,0,0.8); }
-/* People image — multiply blends white bg away on dark hero */
+/* People image — PNG with transparent bg, fills hero */
 .hero__people-img {
   opacity: 1 !important;
-  mix-blend-mode: multiply;
-  object-fit: contain;
-  object-position: bottom center;
+  object-fit: cover;
+  object-position: center top;
 }
 /* Remove bg-name from fc-photo (already removed in JSX) */
 .fc-bg-name { display: none; }
