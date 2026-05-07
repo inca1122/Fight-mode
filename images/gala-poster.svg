@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d0d"/>
+      <stop offset="100%" stop-color="#1a0000"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <rect x="0" y="0" width="600" height="4" fill="#C8202A"/>
+  <rect x="0" y="796" width="600" height="4" fill="#C8202A"/>
+  <text x="300" y="200" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="16" font-weight="700" fill="#D4A434" letter-spacing="6">FIGHT MODE PRESENTS</text>
+  <text x="300" y="340" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="130" font-weight="900" fill="#C8202A" letter-spacing="-5">FM2</text>
+  <text x="300" y="420" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="26" font-weight="900" fill="white" letter-spacing="2">BARE KNUCKLE POLAND</text>
+  <line x1="80" y1="450" x2="520" y2="450" stroke="#D4A434" stroke-width="1" opacity="0.4"/>
+  <text x="300" y="510" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="white" letter-spacing="4">23 MAJA 2026</text>
+  <text x="300" y="545" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="400" fill="#888" letter-spacing="3">POZNAŃ</text>
+  <line x1="80" y1="570" x2="520" y2="570" stroke="#333" stroke-width="1"/>
+  <text x="300" y="620" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#D4A434" letter-spacing="4">KUP BILETY: EBILET.PL</text>
+  <text x="300" y="650" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#888" letter-spacing="4">PPV: FIGHTMODE.TV</text>
+</svg>
