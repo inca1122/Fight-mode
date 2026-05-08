@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import CookieBanner from './components/CookieBanner';
 import Home from './pages/Home';
 import Zawodnicy from './pages/Zawodnicy';
 import FightCard from './pages/FightCard';
@@ -23,6 +24,7 @@ function App() {
         </Routes>
       </main>
       <Footer />
+      <CookieBanner />
     </BrowserRouter>
   );
 }
