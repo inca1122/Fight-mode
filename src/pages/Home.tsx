@@ -123,25 +123,18 @@ export default function Home() {
 
       {/* SPONSORS */}
       <section className="partners">
-        <p className="partners__lbl">Oficjalni Sponsorzy Fight Mode</p>
         <div className="partners__row">
-          <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="partner-card">
-            <div className="partner-card__logo">
-              <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" />
-            </div>
+          <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="partner-card" title="Fortuna">
+            <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" />
             <span className="partner-card__disclaimer">Fortuna to legalny bukmacher. Hazard wiąże się z ryzykiem.</span>
           </a>
           <div className="partners__sep" />
-          <a href="https://pitbull.pl" target="_blank" rel="noreferrer" className="partner-card">
-            <div className="partner-card__logo">
-              <img src={`${BASE}images/sponsors/pitbull-logo.png`} alt="Pitbull" />
-            </div>
+          <a href="https://pitbull.pl" target="_blank" rel="noreferrer" className="partner-card" title="Pitbull">
+            <img src={`${BASE}images/sponsors/pitbull-w.png`} alt="Pitbull" />
           </a>
           <div className="partners__sep" />
-          <a href="https://gastropaczka.pl" target="_blank" rel="noreferrer" className="partner-card">
-            <div className="partner-card__logo">
-              <img src={`${BASE}images/sponsors/gastro-logo.png`} alt="Gastro Paczka" />
-            </div>
+          <a href="https://gastropaczka.pl" target="_blank" rel="noreferrer" className="partner-card" title="Gastro Paczka">
+            <img src={`${BASE}images/sponsors/gastro-logo.png`} alt="Gastro Paczka" />
           </a>
         </div>
       </section>

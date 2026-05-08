@@ -219,52 +219,44 @@ a{text-decoration:none;color:inherit}
   .hero__cta{gap:8px}
 }
 
-/* ── PARTNERS (po tickerze) ── */
+/* ── PARTNERS (FEN style) ── */
 .partners{
-  background:#0d0d0d;
-  border-bottom:1px solid #1a1a1a;
-  padding:20px 40px 14px;
-}
-.partners__lbl{
-  font-family:var(--fc);font-size:9px;font-weight:700;
-  letter-spacing:5px;text-transform:uppercase;
-  color:#444;text-align:center;margin-bottom:16px;
+  background:#111;
+  border-top:1px solid #1c1c1c;
+  border-bottom:1px solid #1c1c1c;
+  padding:0 40px;
 }
 .partners__row{
-  display:flex;align-items:center;justify-content:center;
-  gap:0;flex-wrap:wrap;
+  display:flex;align-items:stretch;justify-content:center;
+  max-width:900px;margin:0 auto;
 }
 .partners__sep{
-  width:1px;height:60px;background:#222;flex-shrink:0;
-  margin:0 8px;
+  width:1px;background:#222;flex-shrink:0;align-self:stretch;
+  margin:16px 0;
 }
 .partner-card{
   display:flex;flex-direction:column;align-items:center;
-  gap:6px;padding:10px 32px;cursor:pointer;
-  transition:background .25s;border-radius:2px;
-  text-decoration:none;
+  justify-content:center;gap:5px;
+  padding:18px 48px;flex:1;
+  transition:background .2s;text-decoration:none;
+  max-width:300px;
 }
-.partner-card:hover{background:rgba(255,255,255,.04)}
-.partner-card__logo{
-  display:flex;align-items:center;justify-content:center;
-  height:52px;
-}
-.partner-card__logo img{
-  height:100%;width:auto;max-width:200px;
+.partner-card:hover{background:rgba(255,255,255,.03)}
+.partner-card img{
+  height:48px;width:auto;max-width:180px;
   object-fit:contain;display:block;
-  transition:transform .25s;
+  transition:transform .2s,opacity .2s;
+  opacity:.9;
 }
-.partner-card:hover .partner-card__logo img{transform:scale(1.06)}
+.partner-card:hover img{transform:scale(1.05);opacity:1}
 .partner-card__disclaimer{
   font-family:var(--fb);font-size:8px;color:#3a3a3a;
-  text-align:center;max-width:180px;line-height:1.4;
+  text-align:center;max-width:160px;line-height:1.35;
 }
 @media(max-width:768px){
-  .partners{padding:16px 16px 10px}
-  .partner-card{padding:8px 16px}
-  .partner-card__logo{height:40px}
-  .partner-card__logo img{max-width:130px}
-  .partners__sep{height:44px}
+  .partners{padding:0 10px}
+  .partner-card{padding:14px 16px}
+  .partner-card img{height:36px;max-width:120px}
 }
 
 /* ── MOBILE MENU ── */
