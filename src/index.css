@@ -729,44 +729,6 @@ a{text-decoration:none;color:inherit}
   object-fit: cover;
   object-position: center top;
 }
-/* ── SMOKE BEHIND PEOPLE ── */
-.hero__smoke-back {
-  position: absolute;
-  bottom: 0; left: 0; right: 0;
-  height: 60%;
-  z-index: 2;
-  pointer-events: none;
-  /* permanent visible base: heat glow + grey haze at floor */
-  background:
-    radial-gradient(ellipse 80% 18% at 42% 100%, rgba(220,55,0,0.40) 0%, rgba(220,55,0,0) 100%),
-    linear-gradient(to top, rgba(200,195,190,0.55) 0%, rgba(200,195,190,0.20) 18%, rgba(200,195,190,0) 40%);
-}
-.smk-b {
-  position: absolute;
-  bottom: 0;
-  border-radius: 45% 45% 20% 20%;
-  filter: blur(10px);
-}
-.smk-b1 {
-  width: 12%; height: 70%; left: 8%;
-  background: linear-gradient(to top, rgba(255,252,245,0.95) 0%, rgba(255,252,245,0.55) 35%, rgba(255,252,245,0) 100%);
-  animation: smkWisp 6s ease-out 0s infinite;
-}
-.smk-b2 {
-  width: 14%; height: 78%; left: 36%;
-  background: linear-gradient(to top, rgba(255,253,248,0.92) 0%, rgba(255,253,248,0.50) 38%, rgba(255,253,248,0) 100%);
-  animation: smkWisp 8.5s ease-out 2s infinite;
-}
-.smk-b3 {
-  width: 11%; height: 65%; left: 68%;
-  background: linear-gradient(to top, rgba(255,251,243,0.90) 0%, rgba(255,251,243,0.48) 36%, rgba(255,251,243,0) 100%);
-  animation: smkWisp 7s ease-out 4.5s infinite;
-}
-@keyframes smkWisp {
-  0%   { opacity: 0.85; transform: translateY(0)    scaleX(1)   rotate(0deg); }
-  40%  { opacity: 1;    transform: translateY(-28%) scaleX(1.4) rotate(-2deg); }
-  100% { opacity: 0;    transform: translateY(-70%) scaleX(2.2) rotate(5deg); }
-}
 
 /* Logo — equidistant between glass pill and bald man's head */
 .hero__logo-corner {
