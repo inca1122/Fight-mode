@@ -194,8 +194,9 @@ a{text-decoration:none;color:inherit}
   .section{padding:54px 18px}
   .nav{padding:0 18px}
   .hbg{display:flex}
-  .nav__soc{display:flex;gap:6px}
-  .nav__soc a svg{width:16px;height:16px}
+  .nav__soc{display:flex;gap:14px}
+  .nav__soc a{padding:4px}
+  .nav__soc a svg{width:18px;height:18px}
   .btn-nb{display:none}
   .news-grid{grid-template-columns:1fr}
   .fighters-grid{grid-template-columns:repeat(2,1fr)}
