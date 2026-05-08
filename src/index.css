@@ -207,21 +207,15 @@ a{text-decoration:none;color:inherit}
   .ppv-band{padding:60px 20px}
   .eposter{padding:32px}
 
-  /* Hero mobile — все 5 бойцов видны */
-  .hero{min-height:calc(67vw + 230px)}
-  .hero__people-img{object-fit:contain!important;object-position:center top!important}
-  .hero__logo-corner-img{height:clamp(60px,15vw,100px)!important}
-  /* Контент сразу под фото */
-  .hero__c{
-    bottom:auto!important;
-    top:calc(67vw + 10px)!important;
-    gap:8px!important;
-  }
-  .hero__sub{font-size:11px!important;letter-spacing:2px;gap:8px}
-  .cd-num{font-size:clamp(32px,9vw,46px)!important}
+  /* Hero mobile — бойцы во весь экран, контент поверх */
+  .hero{min-height:100svh}
+  .hero__logo-corner-img{height:clamp(60px,16vw,100px)!important}
+  .hero__c{bottom:32px!important;gap:6px!important}
+  .hero__sub{font-size:11px!important;letter-spacing:2px;gap:6px}
+  .cd-num{font-size:clamp(32px,9vw,44px)!important}
   .cd-item{min-width:44px}
-  .cd-sep{font-size:36px;padding-bottom:12px}
-  .btn-h{padding:11px 22px!important;font-size:14px!important;letter-spacing:2px}
+  .cd-sep{font-size:36px;padding-bottom:10px}
+  .btn-h{padding:11px 20px!important;font-size:14px!important;letter-spacing:2px}
   .hero__cta{gap:8px}
   .hero__hint{display:none}
 }
