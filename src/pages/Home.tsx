@@ -250,23 +250,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* O NAS */}
-      <section className="onas" id="o-nas">
-        <div className="onas__inner rv fb">
-          <p className="onas__tag">O nas</p>
-          <h2 className="onas__title">Czym jest<br /><span>Fight Mode?</span></h2>
-          <div className="onas__cols">
-            <p className="onas__text">Fight Mode to pierwsza w Polsce profesjonalna federacja walk na gołe pięści. Surowa, bezpośrednia i bez kompromisów. Tutaj nie ma miejsca na udawanie — jest HEXAGON, przeciwnik i prawda, która wychodzi po pierwszym ciosie.</p>
-            <p className="onas__text">Bare knuckle to najstarsza forma walki pięściarskiej — żadnych rękawic, żadnych osłon. Tylko charakter, technika i gotowość do wejścia tam, gdzie inni się cofają. Fight Mode przynosi ten format na polskie ringi po raz pierwszy na taką skalę.</p>
-          </div>
-          <div className="onas__pills">
-            <span className="onas__pill">Bare Knuckle</span>
-            <span className="onas__pill">Polska #1</span>
-            <span className="onas__pill">Poznań · 23.05.2026</span>
-            <span className="onas__pill">19 Zawodników</span>
-          </div>
-        </div>
-      </section>
 
 
     </div>
