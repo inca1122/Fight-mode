@@ -12,7 +12,8 @@ export default function Zawodnicy() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
-  const [filter, setFilter] = useState<'all' | 'main' | 'undercard' | 'kobiety'>('all');
+  type Filter = 'all' | 'main' | 'undercard' | 'kobiety';
+  const [filter, setFilter] = useState<Filter>('all');
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -45,7 +46,7 @@ export default function Zawodnicy() {
 
       {/* FILTER PILLS */}
       <div style={{ padding: '24px 60px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-        {([['all', 'WSZYSCY'], ['main', 'MAIN CARD'], ['undercard', 'UNDERCARD'], ['kobiety', 'KOBIETY']] as const).map(([key, label]) => {
+        {([['all', 'WSZYSCY'], ['main', 'MAIN CARD'], ['undercard', 'UNDERCARD'], ['kobiety', 'KOBIETY']] as [Filter, string][]).map(([key, label]) => {
           const active = filter === key;
           return (
             <button key={key} onClick={() => setFilter(key)} style={{
