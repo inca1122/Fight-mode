@@ -732,42 +732,57 @@ a{text-decoration:none;color:inherit}
 /* ── SMOKE BEHIND PEOPLE ── */
 .hero__smoke-back {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60%;
+  bottom: 0; left: 0; right: 0;
+  height: 55%;
   z-index: 2;
   pointer-events: none;
-  background: linear-gradient(to top,
-    rgba(210,205,200,0.50) 0%,
-    rgba(210,205,200,0.28) 35%,
-    rgba(210,205,200,0) 100%);
+  /* hot glow at the base */
+  background: radial-gradient(ellipse 65% 14% at 40% 100%, rgba(220,55,0,0.32) 0%, rgba(220,55,0,0) 100%);
+}
+.hero__smoke-back::before,
+.hero__smoke-back::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-radius: 40% 40% 0 0;
+  filter: blur(7px);
+}
+.hero__smoke-back::before {
+  width: 5%; height: 58%; left: 22%;
+  background: linear-gradient(to top, rgba(255,248,235,0.82) 0%, rgba(255,248,235,0.35) 55%, rgba(255,248,235,0) 100%);
+  animation: smkWisp 7s ease-out 0.9s infinite;
+}
+.hero__smoke-back::after {
+  width: 4%; height: 48%; left: 58%;
+  background: linear-gradient(to top, rgba(255,248,235,0.78) 0%, rgba(255,248,235,0.30) 52%, rgba(255,248,235,0) 100%);
+  animation: smkWisp 5.8s ease-out 3.6s infinite;
 }
 .smk-b {
   position: absolute;
   bottom: 0;
-  border-radius: 50%;
-  filter: blur(25px);
+  border-radius: 40% 40% 0 0;
+  filter: blur(7px);
 }
 .smk-b1 {
-  width: 65%; height: 70%; left: 2%;
-  background: radial-gradient(ellipse at 50% 100%, rgba(235,230,225,0.75) 0%, rgba(235,230,225,0) 68%);
-  animation: smkRise 8s ease-out 0s infinite;
+  width: 5%; height: 68%; left: 10%;
+  background: linear-gradient(to top, rgba(255,248,230,0.88) 0%, rgba(255,248,230,0.42) 48%, rgba(255,248,230,0) 100%);
+  animation: smkWisp 6s ease-out 0s infinite;
 }
 .smk-b2 {
-  width: 55%; height: 80%; left: 25%;
-  background: radial-gradient(ellipse at 50% 100%, rgba(230,225,220,0.70) 0%, rgba(230,225,220,0) 66%);
-  animation: smkRise 11s ease-out 1.5s infinite;
+  width: 6%; height: 72%; left: 38%;
+  background: linear-gradient(to top, rgba(255,250,240,0.86) 0%, rgba(255,250,240,0.38) 50%, rgba(255,250,240,0) 100%);
+  animation: smkWisp 8s ease-out 2s infinite;
 }
 .smk-b3 {
-  width: 60%; height: 65%; left: 40%;
-  background: radial-gradient(ellipse at 50% 100%, rgba(225,220,215,0.70) 0%, rgba(225,220,215,0) 68%);
-  animation: smkRise 9.5s ease-out 4s infinite;
+  width: 4.5%; height: 62%; left: 68%;
+  background: linear-gradient(to top, rgba(255,248,235,0.84) 0%, rgba(255,248,235,0.36) 47%, rgba(255,248,235,0) 100%);
+  animation: smkWisp 6.5s ease-out 4.2s infinite;
 }
-@keyframes smkRise {
-  0%   { opacity: 0.55; transform: translateY(0) scaleX(1); }
-  20%  { opacity: 1; }
-  100% { opacity: 0;    transform: translateY(-60%) scaleX(1.6); }
+@keyframes smkWisp {
+  0%   { opacity: 0;   transform: translateY(0)    scaleX(1)   rotate(0deg); }
+  8%   { opacity: 1; }
+  50%  { opacity: 0.75; transform: translateY(-36%) scaleX(1.5) rotate(-2deg); }
+  100% { opacity: 0;   transform: translateY(-78%) scaleX(2.4) rotate(5deg); }
 }
 
 /* Logo — equidistant between glass pill and bald man's head */
