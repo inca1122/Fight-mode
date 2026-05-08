@@ -729,20 +729,32 @@ a{text-decoration:none;color:inherit}
   object-fit: cover;
   object-position: center top;
 }
-/* Logo corner — upper left of hero */
+/* Logo — centered below navbar, above fighters' heads */
 .hero__logo-corner {
   position: absolute;
-  top: 88px;
-  left: clamp(20px, 4vw, 60px);
+  top: 76px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
   pointer-events: none;
+  text-align: center;
 }
 .hero__logo-corner-img {
-  width: clamp(160px, 20vw, 280px);
-  max-width: 30vw;
+  width: clamp(240px, 32vw, 480px);
+  max-width: 80vw;
   display: block;
   filter: drop-shadow(0 0 40px rgba(255,80,0,.5));
   animation: glow 3s ease-in-out infinite;
+}
+/* Hero content — pinned to bottom so it doesn't cover faces */
+.hero__c {
+  position: absolute !important;
+  bottom: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: auto !important;
+  width: 100%;
+  gap: 14px !important;
 }
 /* Remove bg-name from fc-photo (already removed in JSX) */
 .fc-bg-name { display: none; }

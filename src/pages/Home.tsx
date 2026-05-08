@@ -63,13 +63,12 @@ export default function Home() {
           <div className="smoke-layer smoke-4"></div>
         </div>
 
-        {/* Logo — upper left between edge and fighters */}
+        {/* Logo — centered below navbar, above fighters' heads */}
         <div className="hero__logo-corner">
           <img src={`${BASE}images/logo.png`} alt="Fight Mode — Bare Knuckle Poland" className="hero__logo-corner-img" />
         </div>
 
         <div className="hero__c">
-          <div className="hero__badge">Fight Mode 2 &nbsp;·&nbsp; 23 Maja 2026 &nbsp;·&nbsp; Poznań</div>
           <div className="hero__sub">
             <strong>23 MAJA 2026</strong>
             <span className="sep">✦</span>
