@@ -1051,17 +1051,30 @@ a{text-decoration:none;color:inherit}
 
 /* ── MOBILE HERO OVERRIDES (at end for full priority) ── */
 @media(max-width:768px){
-  /* Лого — высоко над головами, крупно */
+  /* Hero: лого вверху через flex, контент внизу через absolute */
+  .hero{
+    justify-content:flex-start!important;
+    align-items:center!important;
+  }
+  /* Лого — в потоке flex, сразу под navbar */
   .hero__logo-corner{
-    top:72px!important;
-    left:50%!important;
-    transform:translateX(-50%)!important;
+    position:relative!important;
+    top:auto!important;
+    left:auto!important;
+    transform:none!important;
+    margin-top:74px!important;
+    text-align:center!important;
+    z-index:3!important;
   }
   .hero__logo-corner-img{
-    height:clamp(120px,30vw,170px)!important;
+    height:clamp(120px,30vw,165px)!important;
     max-width:86vw!important;
   }
-  /* Контент внизу */
+  /* Показываем 3 центральных бойца — сдвиг вправо */
+  .hero__people-img{
+    object-position:58% top!important;
+  }
+  /* Контент поверх бойцов снизу */
   .hero__c{
     bottom:36px!important;
     left:50%!important;
@@ -1069,25 +1082,20 @@ a{text-decoration:none;color:inherit}
     width:100%!important;
     gap:8px!important;
   }
-  /* Дата/место — крупнее, читаемее */
+  /* Дата/место */
   .hero__sub{
     font-family:'Barlow Condensed',sans-serif!important;
     font-size:clamp(13px,4.2vw,17px)!important;
     font-weight:700!important;
     letter-spacing:3px!important;
     gap:8px!important;
-    text-shadow:0 2px 10px rgba(0,0,0,.95),0 0 20px rgba(0,0,0,.8)!important;
-    flex-wrap:nowrap!important;
+    text-shadow:0 2px 10px rgba(0,0,0,.95)!important;
   }
-  /* Цифры таймера */
-  .cd-num{
-    font-size:clamp(38px,11vw,54px)!important;
-    text-shadow:0 3px 12px rgba(0,0,0,.9)!important;
-  }
+  /* Таймер */
+  .cd-num{font-size:clamp(38px,11vw,54px)!important;text-shadow:0 3px 12px rgba(0,0,0,.9)!important}
   .cd-item{min-width:46px!important}
   .cd-sep{font-size:42px!important;padding-bottom:14px!important}
   .cd-lbl{font-size:9px!important;letter-spacing:2px!important}
-  /* Кнопки */
   .btn-h{padding:13px 22px!important;font-size:15px!important}
   .hero__cta{gap:10px!important}
 }

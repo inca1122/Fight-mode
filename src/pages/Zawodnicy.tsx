@@ -39,7 +39,7 @@ export default function Zawodnicy() {
           <span style={{ color: '#D4A434' }}>Zawodnicy</span>
         </p>
         <h1 style={{ fontFamily: 'var(--fc)', fontWeight: 900, fontSize: 'clamp(72px,10vw,140px)', textTransform: 'uppercase', letterSpacing: '-2px', lineHeight: 0.9, color: '#fff', marginBottom: '18px' }}>ZAWODNICY</h1>
-        <p style={{ fontFamily: 'var(--fc)', fontSize: '13px', fontWeight: 700, letterSpacing: '5px', textTransform: 'uppercase', color: '#D4A434' }}>FIGHT MODE 2 · 23.05.2026 · POZNAŃ</p>
+        <p style={{ fontFamily: 'var(--fc)', fontSize: '13px', fontWeight: 700, letterSpacing: '5px', textTransform: 'uppercase', color: '#D4A434' }}>FIGHT MODE · 23.05.2026 · POZNAŃ</p>
       </div>
 
       {/* FIGHTER CARDS */}
