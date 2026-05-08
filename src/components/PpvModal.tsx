@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, ReactNode } from 'react';
+import { createContext, useContext, useState, type ReactNode } from 'react';
 
 const Ctx = createContext<() => void>(() => {});
 export const usePpvModal = () => useContext(Ctx);

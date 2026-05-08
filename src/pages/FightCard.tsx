@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { FIGHTS } from '../data/fights';
 import { usePpvModal } from '../components/PpvModal';
 const BASE = import.meta.env.BASE_URL;
