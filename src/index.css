@@ -720,6 +720,7 @@ a{text-decoration:none;color:inherit}
   display: block;
   opacity: 1;
 }
+.hero__people-img--mobile { display: none; }
 
 /* ── HERO SMOKE ── */
 .hero__smoke {
@@ -1070,10 +1071,9 @@ a{text-decoration:none;color:inherit}
     height:clamp(120px,30vw,165px)!important;
     max-width:86vw!important;
   }
-  /* Показываем 3 центральных бойца — сдвиг вправо */
-  .hero__people-img{
-    object-position:58% top!important;
-  }
+  /* Мобильное изображение (3 бойца) */
+  .hero__people-img--desktop{display:none!important}
+  .hero__people-img--mobile{display:block!important;object-position:center top!important}
   /* Контент поверх бойцов снизу */
   .hero__c{
     bottom:36px!important;
