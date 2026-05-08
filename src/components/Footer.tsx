@@ -20,6 +20,32 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="f-location">
+          <p className="f-ct">Kiedy i gdzie?</p>
+          <iframe
+            className="f-map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=16.878%2C52.392%2C16.900%2C52.404&amp;layer=mapnik&amp;marker=52.3978%2C16.8888"
+            title="Międzynarodowe Targi Poznańskie"
+            loading="lazy"
+          />
+          <div className="f-loc-rows">
+            <div className="f-loc-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <div>
+                <p className="f-loc-label">Lokalizacja</p>
+                <p className="f-loc-val">Międzynarodowe Targi Poznańskie</p>
+              </div>
+            </div>
+            <div className="f-loc-row">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <div>
+                <p className="f-loc-label">Data i czas</p>
+                <p className="f-loc-val">23 Maja 2026 · Sobota · 18:00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="f-stats">
           <div className="f-stat">
             <span className="f-stat__num">#1</span>
