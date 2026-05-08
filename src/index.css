@@ -195,7 +195,7 @@ a{text-decoration:none;color:inherit}
 .f-sb-sep{width:1px;height:60px;background:var(--border);flex-shrink:0}
 .footer__main{display:grid;grid-template-columns:1.8fr 1fr 1fr;gap:60px;padding:52px 60px 40px;border-bottom:1px solid var(--border)}
 .f-brand{display:flex;flex-direction:column;gap:16px}
-.f-logo-img{height:48px;width:48px;object-fit:contain}
+.f-logo-img{width:260px;height:126px;object-fit:cover;object-position:top center;display:block}
 .f-desc{font-size:13px;color:#555;line-height:1.75;max-width:280px}
 .f-soc{display:flex;gap:10px}
 .f-si{width:36px;height:36px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--gray);transition:border-color .2s,color .2s,background .2s}
