@@ -63,7 +63,7 @@ export default function Zawodnicy() {
               <div className="fc-photo">
                 <img
                   className="fc-img"
-                  src={`${BASE}images/fighters/${fighter.slug}.png`}
+                  src={`${BASE}images/fighters/${fighter.slug}.jpg`}
                   alt={fullName}
                   loading="lazy"
                   style={{ mixBlendMode: 'luminosity' } as React.CSSProperties}

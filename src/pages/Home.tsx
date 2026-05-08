@@ -179,7 +179,7 @@ export default function Home() {
         <div className="fighters-grid">
           {FIGHTERS.slice(0, 4).map((fighter, i) => (
             <div key={fighter.id} className="fc rv sc" style={{ transitionDelay: `${i * 0.06}s` }}>
-              <img className="fc__img" src={`${BASE}images/fighters/${fighter.slug}.png`} alt={`${fighter.firstName} ${fighter.lastName}`} loading="lazy" />
+              <img className="fc__img" src={`${BASE}images/fighters/${fighter.slug}.jpg`} alt={`${fighter.firstName} ${fighter.lastName}`} loading="lazy" />
               <div className="fc__ov"></div>
               <span className="fc__wt">{fighter.weightClass}</span>
               <div className="fc__info">
