@@ -140,6 +140,22 @@ a{text-decoration:none;color:inherit}
 .nc__lnk{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);display:flex;align-items:center;gap:6px;margin-top:4px;transition:gap .2s}
 .nc:hover .nc__lnk{gap:10px}
 
+/* ── O NAS ── */
+.onas{background:#0a0a0a;padding:100px 60px;border-top:1px solid #161616;position:relative;overflow:hidden}
+.onas::before{content:'FIGHT\AMODE';white-space:pre;position:absolute;right:-40px;top:50%;transform:translateY(-50%);font-family:var(--fc);font-size:clamp(100px,18vw,220px);font-weight:900;line-height:.85;color:rgba(255,255,255,.02);letter-spacing:-4px;pointer-events:none;user-select:none}
+.onas__inner{max-width:900px}
+.onas__tag{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:5px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+.onas__title{font-family:var(--fc);font-weight:900;font-size:clamp(36px,6vw,72px);text-transform:uppercase;line-height:.95;margin-bottom:40px;letter-spacing:-1px}
+.onas__title span{color:var(--red)}
+.onas__cols{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:40px}
+.onas__text{font-size:15px;color:#666;line-height:1.8}
+.onas__pills{display:flex;flex-wrap:wrap;gap:10px}
+.onas__pill{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#fff;border:1px solid #2a2a2a;padding:8px 16px}
+@media(max-width:768px){
+  .onas{padding:60px 18px}
+  .onas__cols{grid-template-columns:1fr;gap:20px}
+}
+
 /* ── CONTACT ── */
 .contact-section{background:#0a0a0a}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:48px}
