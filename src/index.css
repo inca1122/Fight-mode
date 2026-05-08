@@ -43,7 +43,7 @@ a{text-decoration:none;color:inherit}
 .hero__c{position:relative;z-index:2;text-align:center;padding:0 20px;display:flex;flex-direction:column;align-items:center;gap:22px}
 .hero__badge{font-family:var(--fc);font-size:13px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--orange);border:1px solid rgba(255,85,0,.35);padding:6px 22px}
 .hero__logo{width:360px;max-width:88vw;filter:drop-shadow(0 0 50px rgba(255,80,0,.55));animation:glow 3s ease-in-out infinite}
-@keyframes glow{0%,100%{filter:drop-shadow(0 0 30px rgba(255,80,0,.5))}50%{filter:drop-shadow(0 0 70px rgba(255,60,0,.85)) drop-shadow(0 0 120px rgba(255,20,0,.25))}}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 30px rgba(255,80,0,.5)) drop-shadow(3px 4px 10px rgba(0,0,0,0.95)) drop-shadow(-1px -1px 6px rgba(0,0,0,0.85))}50%{filter:drop-shadow(0 0 70px rgba(255,60,0,.85)) drop-shadow(0 0 120px rgba(255,20,0,.25)) drop-shadow(3px 4px 10px rgba(0,0,0,0.95)) drop-shadow(-1px -1px 6px rgba(0,0,0,0.85))}}
 .hero__sub{font-family:var(--fc);font-size:clamp(14px,2vw,18px);font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#bbb;display:flex;align-items:center;gap:14px}
 .hero__sub strong{color:#fff}
 .sep{color:var(--red)}
