@@ -4,6 +4,7 @@ import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import CookieBanner from './components/CookieBanner';
 import { PpvModalProvider } from './components/PpvModal';
+import { ContactModalProvider } from './components/ContactModal';
 import Home from './pages/Home';
 import Zawodnicy from './pages/Zawodnicy';
 import FightCard from './pages/FightCard';
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter basename="/Fight-mode">
       <PpvModalProvider>
+      <ContactModalProvider>
         <ScrollToTop />
         <Navbar />
         <main>
@@ -27,6 +29,7 @@ function App() {
         </main>
         <Footer />
         <CookieBanner />
+      </ContactModalProvider>
       </PpvModalProvider>
     </BrowserRouter>
   );

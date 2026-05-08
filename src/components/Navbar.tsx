@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { usePpvModal } from './PpvModal';
+import { useContactModal } from './ContactModal';
 
 const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
 const BASE = import.meta.env.BASE_URL;
@@ -9,6 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const openPpv = usePpvModal();
+  const openContact = useContactModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -37,7 +39,7 @@ export default function Navbar() {
             <li><Link to="/zawodnicy">Zawodnicy</Link></li>
             <li><Link to="/karta-walk">Karta Walk</Link></li>
             <li><Link to="/aktualnosci">Aktualności</Link></li>
-            <li><Link to="/#kontakt-form">Kontakt</Link></li>
+            <li><button className="nav__ppv-btn" onClick={openContact}>Kontakt</button></li>
           </ul>
         </nav>
 
@@ -77,7 +79,7 @@ export default function Navbar() {
             <Link to="/zawodnicy" onClick={() => setOpen(false)}>Zawodnicy</Link>
             <Link to="/karta-walk" onClick={() => setOpen(false)}>Karta Walk</Link>
             <Link to="/aktualnosci" onClick={() => setOpen(false)}>Aktualno&#347;ci</Link>
-            <Link to="/#kontakt-form" onClick={() => setOpen(false)}>Kontakt</Link>
+            <button className="nav__ppv-btn" onClick={() => { setOpen(false); openContact(); }}>Kontakt</button>
             <button className="nav__ppv-btn" onClick={() => { setOpen(false); openPpv(); }}>PPV</button>
             <a href={EBILET} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="mobile-menu__bilet">KUP BILET</a>
           </nav>
