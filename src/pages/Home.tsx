@@ -250,18 +250,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PPV BAND */}
-      <section className="ppv-band" id="ppv">
-        <div className="rv fb">
-          <p className="ppv-tag">Oglądaj na żywo</p>
-          <h2 className="ppv-title">PAY-PER-VIEW<br /><span style={{ color: 'var(--red)' }}>Fight Mode</span></h2>
-          <p className="ppv-sub">Nie możesz być w Poznaniu? Żaden problem. Kup dostęp PPV i oglądaj Fight Mode na żywo z każdego miejsca na świecie — bez reklam, bez opóźnień.</p>
-          <button onClick={openPpv} className="btn-h r" style={{ display: 'inline-flex' }}>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
-            Kup PPV
-          </button>
-        </div>
-      </section>
 
     </div>
   );
