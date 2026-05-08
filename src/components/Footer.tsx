@@ -1,9 +1,45 @@
+import { Link } from 'react-router-dom';
+import { useContactModal } from './ContactModal';
+
+const BASE = import.meta.env.BASE_URL;
+const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
+
 export default function Footer() {
+  const openContact = useContactModal();
+
   return (
-    <footer className="footer" id="kontakt">
-      <div className="footer__top">
+    <footer className="footer" id="footer">
+
+      {/* STATS BAR */}
+      <div className="f-statsbar">
+        <div className="f-sb-item">
+          <span className="f-sb-num">#1</span>
+          <span className="f-sb-lbl">Federacja Bare Knuckle w Polsce</span>
+        </div>
+        <div className="f-sb-sep" />
+        <div className="f-sb-item">
+          <span className="f-sb-num">19</span>
+          <span className="f-sb-lbl">Zawodników na karcie</span>
+        </div>
+        <div className="f-sb-sep" />
+        <div className="f-sb-item">
+          <span className="f-sb-num">10</span>
+          <span className="f-sb-lbl">Walk w programie</span>
+        </div>
+        <div className="f-sb-sep" />
+        <div className="f-sb-item">
+          <span className="f-sb-num">2026</span>
+          <span className="f-sb-lbl">Rok inauguracji</span>
+        </div>
+      </div>
+
+      {/* MAIN */}
+      <div className="footer__main">
+
+        {/* BRAND */}
         <div className="f-brand">
-          <p className="f-desc">Fight Mode to federacja walk na gołe pięści. Surowa, bezpośrednia i bez kompromisów. Tutaj nie ma miejsca na udawanie — jest HEXAGON, przeciwnik i prawda, która wychodzi po pierwszym ciosie.</p>
+          <img src={`${BASE}images/F-logo.png`} alt="Fight Mode" className="f-logo-img" />
+          <p className="f-desc">Fight Mode to pierwsza w Polsce profesjonalna federacja walk na gołe pięści. Surowa, bezpośrednia i bez kompromisów.</p>
           <div className="f-soc">
             <a href="https://www.youtube.com/@Fightmode.official" target="_blank" rel="noreferrer" className="f-si">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M21.593 7.203a2.506 2.506 0 00-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 00-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765 1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 001.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6 5.207 3.005-5.212 2.995z"/></svg>
@@ -20,59 +56,31 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="f-location">
-          <p className="f-ct">Kiedy i gdzie?</p>
-          <iframe
-            className="f-map"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=16.878%2C52.392%2C16.900%2C52.404&amp;layer=mapnik&amp;marker=52.3978%2C16.8888"
-            title="Międzynarodowe Targi Poznańskie"
-            loading="lazy"
-          />
-          <div className="f-loc-rows">
-            <div className="f-loc-row">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              <div>
-                <p className="f-loc-label">Lokalizacja</p>
-                <p className="f-loc-val">Międzynarodowe Targi Poznańskie</p>
-              </div>
-            </div>
-            <div className="f-loc-row">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--red)" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              <div>
-                <p className="f-loc-label">Data i czas</p>
-                <p className="f-loc-val">23 Maja 2026 · Sobota · 18:00</p>
-              </div>
-            </div>
-          </div>
+        {/* MENU */}
+        <div className="f-col">
+          <p className="f-ct">Menu</p>
+          <ul className="f-ul">
+            <li><Link to="/">Strona główna</Link></li>
+            <li><Link to="/zawodnicy">Zawodnicy</Link></li>
+            <li><Link to="/karta-walk">Karta Walk</Link></li>
+            <li><Link to="/aktualnosci">Aktualności</Link></li>
+          </ul>
         </div>
 
-        <div className="f-stats">
-          <div className="f-stat">
-            <span className="f-stat__num">#1</span>
-            <span className="f-stat__lbl">Federacja Bare Knuckle<br />w Polsce</span>
-          </div>
-          <div className="f-stat">
-            <span className="f-stat__num">19</span>
-            <span className="f-stat__lbl">Zawodników<br />na karcie</span>
-          </div>
-          <div className="f-stat">
-            <span className="f-stat__num">10</span>
-            <span className="f-stat__lbl">Walk<br />w programie</span>
-          </div>
-          <div className="f-stat">
-            <span className="f-stat__num">2026</span>
-            <span className="f-stat__lbl">Rok<br />inauguracji</span>
-          </div>
+        {/* KONTAKT */}
+        <div className="f-col">
+          <p className="f-ct">Kontakt</p>
+          <ul className="f-ul">
+            <li><button className="f-ppv-btn" onClick={openContact}>Napisz do nas</button></li>
+            <li><a href="mailto:kontakt@fightmode.pl">kontakt@fightmode.pl</a></li>
+            <li><a href={EBILET} target="_blank" rel="noreferrer">Kup bilet — ebilet.pl</a></li>
+          </ul>
         </div>
+
       </div>
 
       <div className="footer__bot">
         <p className="f-copy">© 2026 Fight Mode — Bare Knuckle Poland. Wszelkie prawa zastrzeżone.</p>
-        <div className="f-leg">
-          <a href="#">Polityka prywatności</a>
-          <a href="#">Regulamin</a>
-          <a href="#">Cookies</a>
-        </div>
       </div>
     </footer>
   );
