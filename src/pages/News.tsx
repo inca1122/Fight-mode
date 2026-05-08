@@ -11,32 +11,32 @@ export default function News() {
     {
       img: 'news3.jpg',
       date: '28 Kwi 2026', cat: 'Relacja',
-      title: 'Fight Mode 1 — relacja z inauguracyjnej gali',
+      title: 'Fight Mode — relacja z inauguracyjnej gali',
       exc: 'Pierwsza gala Fight Mode przeszła do historii polskiego sportu walki. Pełna hala, emocje do ostatniej sekundy i walki, o których mówi cała Polska.',
     },
     {
       img: 'news1.jpg',
       date: '15 Kwi 2026', cat: 'Wydarzenie',
-      title: 'Oficjalnie: Fight Mode 2 — 23 maja w Poznaniu!',
+      title: 'Oficjalnie: Fight Mode — 23 maja w Poznaniu!',
       exc: 'Fight Mode powraca silniejszy niż kiedykolwiek. Druga odstłona największej federacji walk na gołe pięści w Polsce. Bilety już dostępne przez ebilet.pl.',
     },
     {
       img: 'news-fadipe.jpg',
       date: '02 Kwi 2026', cat: 'Zawodnik',
-      title: 'Henry Fadipe dołącza do Fight Mode 2',
+      title: 'Henry Fadipe dołącza do Fight Mode',
       exc: 'Dynamiczny pięściarz z niebezpiecznym prawym prostym oficjalnie potwierdzony na gali w Poznaniu.',
     },
     {
       img: 'news-kusz-rybak.jpg',
       date: '20 Mar 2026', cat: 'Wydarzenie',
-      title: 'Walka kobiet na karcie Fight Mode 2',
+      title: 'Walka kobiet na karcie Fight Mode',
       exc: 'Dominika Rybak vs Jessica Kusz — starcie dwóch polskich mistrzyń w kategorii do 65 kg.',
     },
     {
       img: 'gala-photo.jpg',
       date: '10 Mar 2026', cat: 'PPV',
-      title: 'PPV Fight Mode 2 już dostępny na fightmode.tv',
-      exc: 'Oglądaj Fight Mode 2 na żywo z każdego miejsca na świecie. Bez reklam, bez opóźnień.',
+      title: 'PPV Fight Mode już dostępny na fightmode.tv',
+      exc: 'Oglądaj Fight Mode na żywo z każdego miejsca na świecie. Bez reklam, bez opóźnień.',
     },
   ];
 

@@ -14,10 +14,10 @@ export function PpvModalProvider({ children }: { children: ReactNode }) {
         <div className="ppvm-overlay" onClick={close}>
           <div className="ppvm" onClick={e => e.stopPropagation()}>
             <button className="ppvm__close" onClick={close} aria-label="Zamknij">✕</button>
-            <p className="ppvm__tag">PPV · Fight Mode 2</p>
+            <p className="ppvm__tag">PPV · Fight Mode</p>
             <h2 className="ppvm__title">Już<br />wkrótce</h2>
             <p className="ppvm__text">
-              Sprzedaż dostępu PPV do Fight Mode 2 zostanie uruchomiona wkrótce.<br />
+              Sprzedaż dostępu PPV do Fight Mode zostanie uruchomiona wkrótce.<br />
               Śledź nasze media społecznościowe, aby nie przegapić informacji.
             </p>
             <div className="ppvm__socials">

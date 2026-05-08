@@ -111,7 +111,7 @@ export default function Home() {
         <div className="ticker__track">
           {[...Array(2)].map((_, i) => (
             <span key={i} style={{ display: 'contents' }}>
-              <span className="ticker__item">Fight Mode 2 — 23 maja 2026 — Poznań <span className="td">✦</span></span>
+              <span className="ticker__item">Fight Mode — 23 maja 2026 — Poznań <span className="td">✦</span></span>
               <span className="ticker__item">Maciej „Striczu" Sulęcki powraca — tym razem na gołe pięści <span className="td">✦</span></span>
               <span className="ticker__item">Bilety już w sprzedaży — ebilet.pl <span className="td">✦</span></span>
               <span className="ticker__item">PPV — oglądaj z każdego miejsca na świecie <span className="td">✦</span></span>
@@ -152,8 +152,8 @@ export default function Home() {
         <div className="event-grid">
           <div className="eposter rv fl">
             <img src={`${BASE}images/gala-photo.jpg`} alt="" className="eposter__bg-photo" />
-            <div className="eposter__bg-num">2</div>
-            <p className="eposter__ed">Fight Mode — Edycja 2</p>
+            
+            <p className="eposter__ed">Fight Mode — 23 Maja 2026</p>
             <h2 className="eposter__name">POZNAŃ<br />23.05.2026</h2>
             <div className="eposter__dets">
               <div className="edet"><div className="edet__val">23 Maja</div><div className="edet__lbl">Data</div></div>
@@ -168,7 +168,7 @@ export default function Home() {
             </div>
           </div>
           <div className="fcard rv fr">
-            <div className="fcard__hd">Walki wieczoru · Fight Mode 2 · Poznań</div>
+            <div className="fcard__hd">Walki wieczoru · Fight Mode · Poznań</div>
             {FIGHTS.map(f => (
               <div key={f.id} className={`frow${f.isMain ? ' main' : ''}`}>
                 <div><div className="fn">{f.redCorner}</div></div>
@@ -230,8 +230,8 @@ export default function Home() {
         <div className="news-grid">
           {[
             { img: 'news2.jpg', cat: 'Zawodnik', date: '05 Maj 2026', title: 'Maciej „Striczu" Sulęcki wraca — tym razem na gołe pięści', exc: 'Były mistrz świata w boksie podejmuje nowe wyzwanie. Poznań 23 maja zapowiada się gorąco.' },
-            { img: 'news3.jpg', cat: 'Relacja',  date: '28 Kwi 2026', title: 'Fight Mode 1 — relacja z inauguracyjnej gali', exc: 'Pierwsza gala Fight Mode przeszła do historii polskiego sportu walki.' },
-            { img: 'news1.jpg', cat: 'Wydarzenie', date: '15 Kwi 2026', title: 'Oficjalnie: Fight Mode 2 — 23 maja w Poznaniu!', exc: 'Fight Mode powraca silniejszy niż kiedykolwiek. Bilety już dostępne przez ebilet.pl.' },
+            { img: 'news3.jpg', cat: 'Relacja',  date: '28 Kwi 2026', title: 'Fight Mode — relacja z inauguracyjnej gali', exc: 'Pierwsza gala Fight Mode przeszła do historii polskiego sportu walki.' },
+            { img: 'news1.jpg', cat: 'Wydarzenie', date: '15 Kwi 2026', title: 'Oficjalnie: Fight Mode — 23 maja w Poznaniu!', exc: 'Fight Mode powraca silniejszy niż kiedykolwiek. Bilety już dostępne przez ebilet.pl.' },
           ].map((a, i) => (
             <article key={i} className="nc rv fb" style={{ transitionDelay: `${i * 0.1}s` }}>
               <div className="nc__imgw">
@@ -253,8 +253,8 @@ export default function Home() {
       <section className="ppv-band" id="ppv">
         <div className="rv fb">
           <p className="ppv-tag">Oglądaj na żywo</p>
-          <h2 className="ppv-title">PAY-PER-VIEW<br /><span style={{ color: 'var(--red)' }}>Fight Mode 2</span></h2>
-          <p className="ppv-sub">Nie możesz być w Poznaniu? Żaden problem. Kup dostęp PPV i oglądaj Fight Mode 2 na żywo z każdego miejsca na świecie — bez reklam, bez opóźnień.</p>
+          <h2 className="ppv-title">PAY-PER-VIEW<br /><span style={{ color: 'var(--red)' }}>Fight Mode</span></h2>
+          <p className="ppv-sub">Nie możesz być w Poznaniu? Żaden problem. Kup dostęp PPV i oglądaj Fight Mode na żywo z każdego miejsca na świecie — bez reklam, bez opóźnień.</p>
           <button onClick={openPpv} className="btn-h r" style={{ display: 'inline-flex' }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
             Kup PPV

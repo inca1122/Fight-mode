@@ -39,7 +39,7 @@ export default function Footer() {
           <ul className="f-ul">
             <li><a href={EBILET} target="_blank" rel="noreferrer">Kup bilet — ebilet.pl</a></li>
             <li><button className="f-ppv-btn" onClick={openPpv}>PPV online</button></li>
-            <li><Link to="/karta-walk">Fight Mode 2</Link></li>
+            <li><Link to="/karta-walk">Fight Mode</Link></li>
           </ul>
         </div>
         <div>

@@ -10,7 +10,7 @@ export default function FightCard() {
       <div className="section">
         <div className="sec-hd">
           <div>
-            <p className="sec-tag">Fight Mode 2 · 23.05.2026</p>
+            <p className="sec-tag">Fight Mode · 23.05.2026</p>
             <h1 className="sec-title">Karta Walk</h1>
           </div>
           <div className="sec-line"></div>
@@ -18,8 +18,8 @@ export default function FightCard() {
         <div className="event-grid">
           <div className="eposter">
             <img src={`${BASE}images/gala-photo.jpg`} alt="" className="eposter__bg-photo" />
-            <div className="eposter__bg-num">2</div>
-            <p className="eposter__ed">Fight Mode — Edycja 2</p>
+            
+            <p className="eposter__ed">Fight Mode — 23 Maja 2026</p>
             <h2 className="eposter__name">POZNAŃ<br />23.05.2026</h2>
             <div className="eposter__dets">
               <div className="edet"><div className="edet__val">23 Maja</div><div className="edet__lbl">Data</div></div>
@@ -34,7 +34,7 @@ export default function FightCard() {
             </div>
           </div>
           <div className="fcard">
-            <div className="fcard__hd">Walki wieczoru · Fight Mode 2 · Poznań</div>
+            <div className="fcard__hd">Walki wieczoru · Fight Mode · Poznań</div>
             {FIGHTS.map(f => (
               <div key={f.id} className={`frow${f.isMain ? ' main' : ''}`}>
                 <div><div className="fn">{f.redCorner}</div></div>
