@@ -21,9 +21,9 @@ export function PpvModalProvider({ children }: { children: ReactNode }) {
               Śledź nasze media społecznościowe, aby nie przegapić informacji.
             </p>
             <div className="ppvm__socials">
-              <a href="https://www.instagram.com/fightmode.pl" target="_blank" rel="noreferrer">Instagram</a>
+              <a href="https://www.instagram.com/fightmode.official/" target="_blank" rel="noreferrer">Instagram</a>
               <span>·</span>
-              <a href="https://www.facebook.com/fightmode.pl" target="_blank" rel="noreferrer">Facebook</a>
+              <a href="https://www.facebook.com/fightmode.official/" target="_blank" rel="noreferrer">Facebook</a>
             </div>
           </div>
         </div>

@@ -121,19 +121,27 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SPONSORS — po tickerze, max widoczność */}
-      <section className="sponsors-strip">
-        <p className="sponsors-strip__lbl">Oficjalni Sponsorzy Fight Mode</p>
-        <div className="sponsors-strip__row">
-          <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="sp-item" title="Fortuna">
-            <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" />
-            <span className="sp-item__disclaimer">Fortuna to legalny bukmacher. Hazard wiąże się z ryzykiem.</span>
+      {/* SPONSORS */}
+      <section className="partners">
+        <p className="partners__lbl">Oficjalni Sponsorzy Fight Mode</p>
+        <div className="partners__row">
+          <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="partner-card">
+            <div className="partner-card__logo">
+              <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" />
+            </div>
+            <span className="partner-card__disclaimer">Fortuna to legalny bukmacher. Hazard wiąże się z ryzykiem.</span>
           </a>
-          <a href="https://pitbull.pl" target="_blank" rel="noreferrer" className="sp-item" title="Pitbull">
-            <img src={`${BASE}images/sponsors/pitbull-new.png`} alt="Pitbull Energy Drink" />
+          <div className="partners__sep" />
+          <a href="https://pitbull.pl" target="_blank" rel="noreferrer" className="partner-card">
+            <div className="partner-card__logo">
+              <img src={`${BASE}images/sponsors/pitbull-logo.png`} alt="Pitbull" />
+            </div>
           </a>
-          <a href="https://gastropaczka.pl" target="_blank" rel="noreferrer" className="sp-item" title="Gastro Paczka">
-            <img src={`${BASE}images/sponsors/logo-gastro.png`} alt="Gastro Paczka" />
+          <div className="partners__sep" />
+          <a href="https://gastropaczka.pl" target="_blank" rel="noreferrer" className="partner-card">
+            <div className="partner-card__logo">
+              <img src={`${BASE}images/sponsors/gastro-logo.png`} alt="Gastro Paczka" />
+            </div>
           </a>
         </div>
       </section>
