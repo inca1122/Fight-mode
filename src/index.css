@@ -207,16 +207,63 @@ a{text-decoration:none;color:inherit}
   .ppv-band{padding:60px 20px}
   .eposter{padding:32px}
 
-  /* Hero mobile */
-  .hero{min-height:100svh}
-  .hero__logo-corner-img{height:clamp(70px,18vw,120px)!important}
-  .hero__c{bottom:32px!important;gap:6px!important}
-  .hero__sub{font-size:11px!important;letter-spacing:2px;gap:8px}
-  .cd-num{font-size:clamp(32px,9vw,46px)!important}
-  .cd-item{min-width:44px}
-  .cd-sep{font-size:36px;padding-bottom:12px}
-  .btn-h{padding:11px 22px!important;font-size:14px!important;letter-spacing:2px}
-  .hero__cta{gap:8px}
+  /* Hero mobile — показываем всех 5 бойцов */
+  .hero{
+    min-height:unset;
+    flex-direction:column;
+    align-items:stretch;
+    justify-content:flex-start;
+  }
+  /* Изображение — полная ширина, естественные пропорции */
+  .hero__people{
+    position:relative;
+    inset:auto;
+    width:100%;
+    height:auto;
+    z-index:1;
+  }
+  .hero__people::after{display:none}
+  .hero__people-img{
+    width:100%;
+    height:auto;
+    object-fit:initial;
+    display:block;
+  }
+  /* Лого поверх фото */
+  .hero__logo-corner{
+    position:absolute;
+    top:10px;
+    z-index:3;
+  }
+  .hero__logo-corner-img{height:clamp(60px,16vw,100px)!important}
+  /* Дымовой эффект убираем на мобиле */
+  .hero__smoke{display:none}
+  /* Контент под фото */
+  .hero__c{
+    position:relative!important;
+    bottom:auto!important;
+    top:auto!important;
+    left:auto!important;
+    transform:none!important;
+    width:100%;
+    padding:18px 16px 28px;
+    gap:10px!important;
+    background:var(--black);
+    z-index:2;
+  }
+  /* Фон сзади контента */
+  .hero__bg{
+    top:auto;
+    bottom:0;
+    height:300px;
+  }
+  .hero__hint{display:none}
+  .hero__sub{font-size:11px!important;letter-spacing:2px;gap:6px}
+  .cd-num{font-size:clamp(34px,9vw,48px)!important}
+  .cd-item{min-width:46px}
+  .cd-sep{font-size:38px;padding-bottom:10px}
+  .btn-h{padding:12px 24px!important;font-size:14px!important;letter-spacing:2px}
+  .hero__cta{gap:10px}
 }
 
 /* ── PARTNERS ── */
