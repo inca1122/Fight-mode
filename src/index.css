@@ -211,7 +211,7 @@ a{text-decoration:none;color:inherit}
   .hero{min-height:100svh}
   /* Лого — крупнее, чуть ниже navbar */
   .hero__logo-corner{top:72px!important}
-  .hero__logo-corner-img{height:clamp(110px,28vw,160px)!important}
+  /* logo size in end-of-file block */
   /* Контент */
   .hero__c{bottom:36px!important;gap:8px!important}
   /* Текст — как на десктопе (Barlow Condensed, буквенный интервал) */
