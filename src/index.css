@@ -1067,11 +1067,24 @@ a{text-decoration:none;color:inherit}
 }
 .cm__ci .cm__icon { color: var(--orange); }
 @media(max-width:640px){
+  .cm-overlay { align-items: flex-start; padding: 12px; }
+  .cm { max-width: 100%; }
   .cm__body { grid-template-columns: 1fr; }
-  .cm__left { padding: 28px 20px; border-right: none; border-bottom: 1px solid #1e1e1e; }
-  .cm__form { padding: 24px 20px; }
-  .cm__company { padding: 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
-  .cm__company-items { flex-direction: column; gap: 10px; }
+  .cm__left { padding: 18px 16px 14px; border-right: none; border-bottom: 1px solid #1e1e1e; }
+  .cm__title { font-size: 22px; margin-bottom: 8px; }
+  .cm__desc { display: none; }
+  .cm__links { gap: 10px; }
+  .cm__link { font-size: 12px; }
+  .cm__icon { width: 26px; height: 26px; }
+  .cm__form { padding: 16px; gap: 10px; }
+  .cm__field input { padding: 10px 12px; font-size: 13px; }
+  .cm__check { font-size: 11px; }
+  .cm__submit { padding: 12px; font-size: 10px; }
+  .cm__company { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .cm__company-title { font-size: 9px; }
+  .cm__company-items { flex-direction: column; gap: 8px; }
+  .cm__ci { font-size: 11px; }
+  .cm__close { top: 10px; right: 12px; }
 }
 
 /* nav & footer PPV button styled as link */
