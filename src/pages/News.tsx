@@ -21,13 +21,13 @@ export default function News() {
       exc: 'Fight Mode powraca silniejszy niż kiedykolwiek. Druga odstłona największej federacji walk na gołe pięści w Polsce. Bilety już dostępne przez ebilet.pl.',
     },
     {
-      img: 'fighters/fadipe.jpg',
+      img: 'news-fadipe.jpg',
       date: '02 Kwi 2026', cat: 'Zawodnik',
       title: 'Henry Fadipe dołącza do Fight Mode 2',
       exc: 'Dynamiczny pięściarz z niebezpiecznym prawym prostym oficjalnie potwierdzony na gali w Poznaniu.',
     },
     {
-      img: 'fighters/kusz.jpg',
+      img: 'news-kusz-rybak.jpg',
       date: '20 Mar 2026', cat: 'Wydarzenie',
       title: 'Walka kobiet na karcie Fight Mode 2',
       exc: 'Dominika Rybak vs Jessica Kusz — starcie dwóch polskich mistrzyń w kategorii do 65 kg.',
