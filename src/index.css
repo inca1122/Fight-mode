@@ -207,16 +207,20 @@ a{text-decoration:none;color:inherit}
   .ppv-band{padding:60px 20px}
   .eposter{padding:32px}
 
-  /* Hero mobile — бойцы во весь экран, контент поверх */
+  /* Hero mobile */
   .hero{min-height:100svh}
-  .hero__logo-corner-img{height:clamp(60px,16vw,100px)!important}
-  .hero__c{bottom:32px!important;gap:6px!important}
-  .hero__sub{font-size:11px!important;letter-spacing:2px;gap:6px}
-  .cd-num{font-size:clamp(32px,9vw,44px)!important}
-  .cd-item{min-width:44px}
-  .cd-sep{font-size:36px;padding-bottom:10px}
-  .btn-h{padding:11px 20px!important;font-size:14px!important;letter-spacing:2px}
-  .hero__cta{gap:8px}
+  /* Лого — крупнее, чуть ниже navbar */
+  .hero__logo-corner{top:72px!important}
+  .hero__logo-corner-img{height:clamp(110px,28vw,160px)!important}
+  /* Контент */
+  .hero__c{bottom:36px!important;gap:8px!important}
+  /* Текст — как на десктопе (Barlow Condensed, буквенный интервал) */
+  .hero__sub{font-size:clamp(11px,3.2vw,15px)!important;letter-spacing:4px!important;gap:10px!important}
+  .cd-num{font-size:clamp(36px,10vw,52px)!important}
+  .cd-item{min-width:48px}
+  .cd-sep{font-size:40px!important;padding-bottom:12px}
+  .btn-h{padding:12px 22px!important;font-size:14px!important;letter-spacing:2px}
+  .hero__cta{gap:10px}
   .hero__hint{display:none}
 }
 
@@ -259,10 +263,10 @@ a{text-decoration:none;color:inherit}
 }
 @media(max-width:768px){
   .partners{padding:4px 10px 8px}
-  .partner-card{padding:10px 16px}
-  .plogo--fortuna{height:32px}
-  .plogo-text--pitbull{font-size:20px}
-  .plogo-text--gastro{font-size:15px}
+  .partners{padding:4px 8px 8px}
+  .partner-card{padding:8px 10px;flex:1;min-width:0}
+  .plogo{height:34px!important;max-width:none!important;width:100%;object-fit:contain}
+  .partner-card__disclaimer{font-size:7px;max-width:100px}
 }
 
 /* ── MOBILE MENU ── */
