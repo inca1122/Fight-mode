@@ -31,6 +31,13 @@ export default function Zawodnicy() {
     return () => obs.disconnect();
   }, []);
 
+  useEffect(() => {
+    const t = setTimeout(() => {
+      pageRef.current?.querySelectorAll('.rv').forEach(el => el.classList.add('go'));
+    }, 30);
+    return () => clearTimeout(t);
+  }, [filter]);
+
   return (
     <div ref={pageRef} style={{ background: '#131418', minHeight: '100vh', paddingTop: '68px' }}>
       {/* HERO STRIP */}
