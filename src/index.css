@@ -732,7 +732,7 @@ a{text-decoration:none;color:inherit}
 /* Logo — equidistant between glass pill and bald man's head */
 .hero__logo-corner {
   position: absolute;
-  top: 74px;
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
