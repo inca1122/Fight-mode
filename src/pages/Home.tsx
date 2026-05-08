@@ -218,6 +218,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* KONTAKT */}
+      <section className="section contact-section" id="kontakt-form">
+        <div className="sec-hd rv fl">
+          <div>
+            <p className="sec-tag">Napisz do nas</p>
+            <h2 className="sec-title">Kontakt</h2>
+          </div>
+          <div className="sec-line"></div>
+        </div>
+        <div className="contact-grid">
+          <div className="contact-info rv fl">
+            <p className="contact-desc">Masz pytania? Chcesz zacząć współpracę? Chcesz się reklamować? Skontaktuj się z nami.</p>
+            <div className="contact-details">
+              <a href="mailto:kontakt@fightmode.pl" className="contact-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+                kontakt@fightmode.pl
+              </a>
+              <div className="contact-link">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                ul. Marcina Kasprzaka 29A lok. 917,<br />01-234 Warszawa
+              </div>
+            </div>
+            <div className="company-data">
+              <p className="company-data__title">Dane firmy</p>
+              <div className="company-data__row"><span>NIP</span><span>5273211626</span></div>
+              <div className="company-data__row"><span>KRS</span><span>0001230805</span></div>
+              <div className="company-data__row"><span>REGON</span><span>544336948</span></div>
+            </div>
+          </div>
+          <form className="contact-form rv fr" action="mailto:kontakt@fightmode.pl" method="post" encType="text/plain">
+            <div className="cf-field">
+              <input type="text" name="name" placeholder="Imię i Nazwisko" required />
+            </div>
+            <div className="cf-field">
+              <input type="email" name="email" placeholder="E-mail" required />
+            </div>
+            <div className="cf-field">
+              <input type="tel" name="phone" placeholder="Numer telefonu" />
+            </div>
+            <label className="cf-check">
+              <input type="checkbox" name="newsletter" />
+              <span>Chcę otrzymywać informacje o nowych galach i promocjach (opcjonalnie).</span>
+            </label>
+            <label className="cf-check">
+              <input type="checkbox" name="phone_consent" required />
+              <span>Wyrażam zgodę na kontakt telefoniczny w celu dokończenia zgłoszenia. <em>*</em></span>
+            </label>
+            <button type="submit" className="btn-h r" style={{ width: '100%', justifyContent: 'center' }}>Wyślij wiadomość</button>
+          </form>
+        </div>
+      </section>
+
       {/* AKTUALNOŚCI */}
       <section className="section news-section" id="aktualnosci">
         <div className="sec-hd rv fl">

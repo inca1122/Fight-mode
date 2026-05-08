@@ -37,6 +37,7 @@ export default function Navbar() {
             <li><Link to="/zawodnicy">Zawodnicy</Link></li>
             <li><Link to="/karta-walk">Karta Walk</Link></li>
             <li><Link to="/aktualnosci">Aktualności</Link></li>
+            <li><Link to="/#kontakt-form">Kontakt</Link></li>
             <li><button className="nav__ppv-btn" onClick={openPpv}>PPV</button></li>
           </ul>
         </nav>
@@ -77,6 +78,7 @@ export default function Navbar() {
             <Link to="/zawodnicy" onClick={() => setOpen(false)}>Zawodnicy</Link>
             <Link to="/karta-walk" onClick={() => setOpen(false)}>Karta Walk</Link>
             <Link to="/aktualnosci" onClick={() => setOpen(false)}>Aktualno&#347;ci</Link>
+            <Link to="/#kontakt-form" onClick={() => setOpen(false)}>Kontakt</Link>
             <button className="nav__ppv-btn" onClick={() => { setOpen(false); openPpv(); }}>PPV</button>
             <a href={EBILET} target="_blank" rel="noreferrer" onClick={() => setOpen(false)} className="mobile-menu__bilet">KUP BILET</a>
           </nav>
