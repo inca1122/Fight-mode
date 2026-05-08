@@ -207,18 +207,23 @@ a{text-decoration:none;color:inherit}
   .ppv-band{padding:60px 20px}
   .eposter{padding:32px}
 
-  /* Hero mobile */
-  .hero{min-height:100svh}
-  .hero__logo-corner-img{height:clamp(70px,18vw,120px)!important}
-  .hero__c{bottom:32px!important;gap:6px!important}
+  /* Hero mobile — все 5 бойцов видны */
+  .hero{min-height:calc(67vw + 230px)}
+  .hero__people-img{object-fit:contain!important;object-position:center top!important}
+  .hero__logo-corner-img{height:clamp(60px,15vw,100px)!important}
+  /* Контент сразу под фото */
+  .hero__c{
+    bottom:auto!important;
+    top:calc(67vw + 10px)!important;
+    gap:8px!important;
+  }
   .hero__sub{font-size:11px!important;letter-spacing:2px;gap:8px}
   .cd-num{font-size:clamp(32px,9vw,46px)!important}
   .cd-item{min-width:44px}
   .cd-sep{font-size:36px;padding-bottom:12px}
   .btn-h{padding:11px 22px!important;font-size:14px!important;letter-spacing:2px}
   .hero__cta{gap:8px}
-  /* Показать всех 5 бойцов: zoom out через object-position */
-  .hero__people-img{object-fit:contain!important;object-position:center top!important}
+  .hero__hint{display:none}
 }
 
 /* ── PARTNERS ── */
