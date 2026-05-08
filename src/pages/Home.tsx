@@ -56,7 +56,7 @@ export default function Home() {
 
         {/* People image — fades into dark background */}
         <div className="hero__people">
-          <img src={`${BASE}images/people-main.png`} alt="" className="hero__people-img" />
+          <img src={`${BASE}images/people-main.webp`} alt="" className="hero__people-img" />
         </div>
 
         {/* Smoke rising from bottom */}
