@@ -847,7 +847,12 @@ a{text-decoration:none;color:inherit}
 .nav__ppv-btn, .f-ppv-btn {
   background: none; border: none; padding: 0; cursor: pointer;
   font-family: inherit; font-size: inherit; font-weight: inherit;
-  color: inherit; text-align: left;
+  color: inherit; text-align: left; line-height: inherit; vertical-align: baseline;
+  display: inline; text-decoration: none;
+}
+.nav__glass-links li .nav__ppv-btn {
+  font-family: var(--fc); font-size: 11px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase; color: #ccc;
 }
 .nav__ppv-btn:hover { color: #fff; }
 .f-ppv-btn { color: #888; }
