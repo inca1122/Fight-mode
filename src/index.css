@@ -857,9 +857,10 @@ a{text-decoration:none;color:inherit}
   color: rgba(255,255,255,0.75);
   padding: 7px 16px; border-radius: 7px;
   transition: background 0.22s ease, color 0.22s ease;
-  white-space: nowrap;
+  white-space: nowrap; outline: none;
 }
-.nav__glass-links li .nav__ppv-btn:hover {
+.nav__glass-links li .nav__ppv-btn:hover,
+.nav__glass-links li .nav__ppv-btn:focus {
   background: rgba(200,32,42,0.75); color: #fff;
 }
 .nav__ppv-btn:hover { color: #fff; }

@@ -12,8 +12,6 @@ export default function Zawodnicy() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
-  type Filter = 'all' | 'main' | 'undercard' | 'kobiety';
-  const [filter, setFilter] = useState<Filter>('all');
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,13 +29,6 @@ export default function Zawodnicy() {
     return () => obs.disconnect();
   }, []);
 
-  useEffect(() => {
-    const t = setTimeout(() => {
-      pageRef.current?.querySelectorAll('.rv').forEach(el => el.classList.add('go'));
-    }, 30);
-    return () => clearTimeout(t);
-  }, [filter]);
-
   return (
     <div ref={pageRef} style={{ background: '#131418', minHeight: '100vh', paddingTop: '68px' }}>
       {/* HERO STRIP */}
@@ -51,30 +42,9 @@ export default function Zawodnicy() {
         <p style={{ fontFamily: 'var(--fc)', fontSize: '13px', fontWeight: 700, letterSpacing: '5px', textTransform: 'uppercase', color: '#D4A434' }}>FIGHT MODE 2 · 23.05.2026 · POZNAŃ</p>
       </div>
 
-      {/* FILTER PILLS */}
-      <div style={{ padding: '24px 60px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-        {([['all', 'WSZYSCY'], ['main', 'MAIN CARD'], ['undercard', 'UNDERCARD'], ['kobiety', 'KOBIETY']] as [Filter, string][]).map(([key, label]) => {
-          const active = filter === key;
-          return (
-            <button key={key} onClick={() => setFilter(key)} style={{
-              fontFamily: 'var(--fc)', fontSize: '11px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase',
-              padding: '8px 18px', background: active ? '#C8202A' : 'transparent',
-              border: `1px solid ${active ? '#C8202A' : '#D4A434'}`,
-              color: '#fff', cursor: 'pointer', transition: 'background .15s, border-color .15s'
-            }}>{label}</button>
-          );
-        })}
-      </div>
-
       {/* FIGHTER CARDS */}
-      <div style={{ padding: '0 60px 80px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-        {sorted.filter(f => {
-          if (filter === 'all') return true;
-          if (filter === 'kobiety') return f.gender === 'F';
-          if (filter === 'main') return f.cardType === 'main' || f.cardType === 'co-main';
-          if (filter === 'undercard') return f.cardType === 'undercard';
-          return true;
-        }).map((fighter, idx) => {
+      <div style={{ padding: '24px 60px 80px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
+        {sorted.map((fighter, idx) => {
           const fullName = `${fighter.firstName} ${fighter.lastName}`;
           const opponent = opponentMap.get(fullName) ?? 'TBA';
           const panelVisible = isMobile ? expandedId === fighter.id : hoveredId === fighter.id;
