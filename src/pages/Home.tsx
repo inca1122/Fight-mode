@@ -126,7 +126,7 @@ export default function Home() {
         <p className="partners__label">OFICJALNI SPONSORZY</p>
         <div className="partners__row">
           <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="partner-card">
-            <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" className="plogo plogo--fortuna" />
+            <img src={`${BASE}images/sponsors/logo-fortuna.jpg`} alt="Fortuna" className="plogo plogo--fortuna" />
             <span className="partner-card__disclaimer">Fortuna to legalny bukmacher. Hazard wiąże się z ryzykiem.</span>
           </a>
           <div className="partners__sep" />
