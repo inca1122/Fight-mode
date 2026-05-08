@@ -1068,8 +1068,8 @@ a{text-decoration:none;color:inherit}
     z-index:3!important;
   }
   .hero__logo-corner-img{
-    height:clamp(160px,44vw,210px)!important;
-    max-width:90vw!important;
+    height:clamp(200px,56vw,260px)!important;
+    max-width:92vw!important;
   }
   /* Мобильное изображение (3 бойца) */
   .hero__people-img--desktop{display:none!important}
