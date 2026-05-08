@@ -121,6 +121,23 @@ export default function Home() {
         </div>
       </div>
 
+      {/* SPONSORS — po tickerze, max widoczność */}
+      <section className="sponsors-strip">
+        <p className="sponsors-strip__lbl">Oficjalni Sponsorzy Fight Mode</p>
+        <div className="sponsors-strip__row">
+          <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="sp-item" title="Fortuna">
+            <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" />
+            <span className="sp-item__disclaimer">Fortuna to legalny bukmacher. Hazard wiąże się z ryzykiem.</span>
+          </a>
+          <a href="https://pitbull.pl" target="_blank" rel="noreferrer" className="sp-item" title="Pitbull">
+            <img src={`${BASE}images/sponsors/pitbull-new.png`} alt="Pitbull Energy Drink" />
+          </a>
+          <a href="https://gastropaczka.pl" target="_blank" rel="noreferrer" className="sp-item" title="Gastro Paczka">
+            <img src={`${BASE}images/sponsors/logo-gastro.png`} alt="Gastro Paczka" />
+          </a>
+        </div>
+      </section>
+
       {/* KARTA WALK */}
       <section className="section event-section" id="karta-walk">
         <div className="sec-hd rv fl">
@@ -243,23 +260,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SPONSORS */}
-      <section className="sponsors">
-        <p className="sponsors__lbl">Oficjalni Sponsorzy Fight Mode</p>
-        <div className="sponsors__row">
-          <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="sp" title="Fortuna">
-            <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" style={{ height: '44px', objectFit: 'contain' }} />
-          </a>
-          <div className="sp">
-            <img src={`${BASE}images/sponsors/pitbull-new.png`} alt="Pitbull Energy Drink" style={{ height: '96px', objectFit: 'contain' }} />
-          </div>
-          <div className="sp">
-            <div style={{ fontFamily: 'var(--fc)', fontWeight: 900, fontSize: 'clamp(18px,2vw,28px)', letterSpacing: '0px', textTransform: 'uppercase', color: '#fff', lineHeight: 1.05, textAlign: 'center' }}>
-              GASTRO<br />PACZKA
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
