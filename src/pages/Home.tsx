@@ -247,7 +247,7 @@ export default function Home() {
             <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" style={{ height: '44px', objectFit: 'contain' }} />
           </a>
           <div className="sp">
-            <img src={`${BASE}images/sponsors/pitbull-new.png`} alt="Pitbull Energy Drink" style={{ height: '52px', objectFit: 'contain' }} />
+            <img src={`${BASE}images/sponsors/pitbull-new.png`} alt="Pitbull Energy Drink" style={{ height: '80px', objectFit: 'contain' }} />
           </div>
           <div className="sp">
             <div style={{ fontFamily: 'var(--fc)', fontWeight: 900, fontSize: 'clamp(18px,2vw,28px)', letterSpacing: '0px', textTransform: 'uppercase', color: '#fff', lineHeight: 1.05, textAlign: 'center' }}>
