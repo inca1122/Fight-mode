@@ -744,7 +744,7 @@ a{text-decoration:none;color:inherit}
   width: auto;
   max-width: 82vw;
   display: block;
-  filter: drop-shadow(0 0 40px rgba(255,80,0,.5));
+  filter: drop-shadow(0 0 40px rgba(255,80,0,.5)) drop-shadow(3px 4px 10px rgba(0,0,0,0.95)) drop-shadow(-1px -1px 6px rgba(0,0,0,0.9));
   animation: glow 3s ease-in-out infinite;
 }
 /* Hero content — higher up, not covering faces */
