@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import { FIGHTS } from '../data/fights';
+import { usePpvModal } from '../components/PpvModal';
 const BASE = import.meta.env.BASE_URL;
+const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
 
 export default function FightCard() {
+  const openPpv = usePpvModal();
   return (
     <div style={{ background: 'var(--dark)', minHeight: '100vh', paddingTop: '68px' }}>
       <div className="section">
@@ -27,8 +30,8 @@ export default function FightCard() {
               <div className="edet"><div className="edet__val">Gołe Pięści</div><div className="edet__lbl">Format</div></div>
             </div>
             <div className="eposter__cta">
-              <a href="https://ebilet.pl" target="_blank" rel="noreferrer" className="btn-h r" style={{ fontSize: '14px', padding: '12px 28px' }}>Kup Bilet</a>
-              <Link to="/ppv" className="btn-h o" style={{ fontSize: '14px', padding: '10px 28px' }}>Oglądaj PPV</Link>
+              <a href={EBILET} target="_blank" rel="noreferrer" className="btn-h r" style={{ fontSize: '14px', padding: '12px 28px' }}>Kup Bilet</a>
+              <button onClick={openPpv} className="btn-h o" style={{ fontSize: '14px', padding: '10px 28px' }}>Oglądaj PPV</button>
             </div>
           </div>
           <div className="fcard">

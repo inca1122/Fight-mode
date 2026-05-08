@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { usePpvModal } from './PpvModal';
+const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
 
 export default function Footer() {
+  const openPpv = usePpvModal();
   return (
     <footer className="footer" id="kontakt">
       <div className="footer__top">
@@ -25,14 +28,14 @@ export default function Footer() {
             <li><Link to="/zawodnicy">Zawodnicy</Link></li>
             <li><Link to="/karta-walk">Karta Walk</Link></li>
             <li><Link to="/aktualnosci">Aktualności</Link></li>
-            <li><Link to="/ppv">Oglądaj PPV</Link></li>
+            <li><button className="f-ppv-btn" onClick={openPpv}>Oglądaj PPV</button></li>
           </ul>
         </div>
         <div>
           <p className="f-ct">Bilety &amp; PPV</p>
           <ul className="f-ul">
-            <li><a href="https://ebilet.pl" target="_blank" rel="noreferrer">Kup bilet — ebilet.pl</a></li>
-            <li><a href="https://fightmode.tv" target="_blank" rel="noreferrer">PPV online</a></li>
+            <li><a href={EBILET} target="_blank" rel="noreferrer">Kup bilet — ebilet.pl</a></li>
+            <li><button className="f-ppv-btn" onClick={openPpv}>PPV online</button></li>
             <li><Link to="/karta-walk">Fight Mode 2</Link></li>
           </ul>
         </div>

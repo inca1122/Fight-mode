@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0d0d"/>
+      <stop offset="100%" stop-color="#1a0000"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#bg)"/>
+  <text x="300" y="560" text-anchor="middle" font-family="Arial Black,Impact,sans-serif" font-size="110" font-weight="900" fill="white" opacity="0.07">FORMELA</text>
+  <!-- silhouette -->
+  <g fill="#111111" opacity="0.92">
+    <!-- head -->
+    <circle cx="300" cy="140" r="48"/>
+    <!-- neck -->
+    <rect x="285" y="185" width="30" height="25"/>
+    <!-- torso -->
+    <polygon points="255,210 345,210 360,395 240,395"/>
+    <!-- left arm guard -->
+    <polygon points="255,218 225,218 188,295 218,305"/>
+    <!-- left forearm up -->
+    <polygon points="205,300 222,300 218,215 200,218"/>
+    <!-- left fist -->
+    <ellipse cx="209" cy="208" rx="22" ry="18"/>
+    <!-- right arm uppercut coil -->
+    <polygon points="345,220 390,280 410,320 385,335 360,310 345,260"/>
+    <!-- right fist low -->
+    <ellipse cx="400" cy="330" rx="22" ry="18"/>
+    <!-- left leg -->
+    <polygon points="258,395 240,542 230,660 262,660 280,542 292,452"/>
+    <!-- left foot -->
+    <ellipse cx="244" cy="663" rx="28" ry="12"/>
+    <!-- right leg -->
+    <polygon points="306,395 328,542 340,660 310,660 296,542 290,452"/>
+    <!-- right foot -->
+    <ellipse cx="326" cy="663" rx="28" ry="12"/>
+  </g>
+  <!-- ground line -->
+  <line x1="100" y1="675" x2="500" y2="675" stroke="#C8202A" stroke-width="2" opacity="0.4"/>
+</svg>

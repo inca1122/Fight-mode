@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FIGHTERS } from '../data/fighters';
 import { FIGHTS } from '../data/fights';
+import { usePpvModal } from '../components/PpvModal';
+
+const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
 
 const BASE = import.meta.env.BASE_URL;
 const EVENT = new Date('2026-05-23T20:00:00+02:00');
@@ -42,6 +45,7 @@ function useReveal(ref: React.RefObject<HTMLElement | null>) {
 export default function Home() {
   const cd = useCountdown();
   const pageRef = useRef<HTMLDivElement>(null);
+  const openPpv = usePpvModal();
   useReveal(pageRef);
 
   return (
@@ -86,14 +90,14 @@ export default function Home() {
             <div className="cd-item"><span className="cd-num">{cd.s}</span><span className="cd-lbl">Sek</span></div>
           </div>
           <div className="hero__cta">
-            <a href="https://ebilet.pl" target="_blank" rel="noreferrer" className="btn-h r">
+            <a href={EBILET} target="_blank" rel="noreferrer" className="btn-h r">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/></svg>
               Kup Bilet
             </a>
-            <Link to="/ppv" className="btn-h o">
+            <button onClick={openPpv} className="btn-h o">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
               Oglądaj PPV
-            </Link>
+            </button>
           </div>
         </div>
         <div className="hero__hint">
@@ -140,8 +144,8 @@ export default function Home() {
               <div className="edet"><div className="edet__val">Gołe Pięści</div><div className="edet__lbl">Format</div></div>
             </div>
             <div className="eposter__cta">
-              <a href="https://ebilet.pl" target="_blank" rel="noreferrer" className="btn-h r" style={{ fontSize: '14px', padding: '12px 28px' }}>Kup Bilet</a>
-              <Link to="/ppv" className="btn-h o" style={{ fontSize: '14px', padding: '10px 28px' }}>Oglądaj PPV</Link>
+              <a href={EBILET} target="_blank" rel="noreferrer" className="btn-h r" style={{ fontSize: '14px', padding: '12px 28px' }}>Kup Bilet</a>
+              <button onClick={openPpv} className="btn-h o" style={{ fontSize: '14px', padding: '10px 28px' }}>Oglądaj PPV</button>
             </div>
           </div>
           <div className="fcard rv fr">
@@ -232,10 +236,10 @@ export default function Home() {
           <p className="ppv-tag">Oglądaj na żywo</p>
           <h2 className="ppv-title">PAY-PER-VIEW<br /><span style={{ color: 'var(--red)' }}>Fight Mode 2</span></h2>
           <p className="ppv-sub">Nie możesz być w Poznaniu? Żaden problem. Kup dostęp PPV i oglądaj Fight Mode 2 na żywo z każdego miejsca na świecie — bez reklam, bez opóźnień.</p>
-          <a href="https://fightmode.tv" target="_blank" rel="noreferrer" className="btn-h r" style={{ display: 'inline-flex' }}>
+          <button onClick={openPpv} className="btn-h r" style={{ display: 'inline-flex' }}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
-            Kup PPV — fightmode.tv
-          </a>
+            Kup PPV
+          </button>
         </div>
       </section>
 

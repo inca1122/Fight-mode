@@ -1,11 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { usePpvModal } from './PpvModal';
+
+const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
 
 const BASE = import.meta.env.BASE_URL;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const openPpv = usePpvModal();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -26,7 +30,7 @@ export default function Navbar() {
           <li><Link to="/zawodnicy" onClick={() => setOpen(false)}>Zawodnicy</Link></li>
           <li><Link to="/karta-walk" onClick={() => setOpen(false)}>Karta Walk</Link></li>
           <li><Link to="/aktualnosci" onClick={() => setOpen(false)}>Aktualności</Link></li>
-          <li><Link to="/ppv" onClick={() => setOpen(false)}>PPV</Link></li>
+          <li><button className="nav__ppv-btn" onClick={() => { setOpen(false); openPpv(); }}>PPV</button></li>
         </ul>
       </nav>
 
@@ -43,8 +47,8 @@ export default function Navbar() {
             <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
           </a>
         </div>
-        <a href="https://ebilet.pl" target="_blank" rel="noreferrer" className="btn-nb o">Kup Bilet</a>
-        <Link to="/ppv" className="btn-nb r">PPV</Link>
+        <a href={EBILET} target="_blank" rel="noreferrer" className="btn-nb o">Kup Bilet</a>
+        <button className="btn-nb r" onClick={openPpv}>PPV</button>
       </div>
 
       <button className="hbg" id="hbg" aria-label="Menu" onClick={() => setOpen(v => !v)}>
