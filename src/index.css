@@ -729,6 +729,44 @@ a{text-decoration:none;color:inherit}
   object-fit: cover;
   object-position: center top;
 }
+/* ── SMOKE BEHIND PEOPLE ── */
+.hero__smoke-back {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.smk-b {
+  position: absolute;
+  bottom: -5%;
+  left: -15%;
+  width: 130%;
+  height: 65%;
+  border-radius: 50%;
+  opacity: 0;
+  filter: blur(55px);
+}
+.smk-b1 {
+  background: radial-gradient(ellipse at 50% 100%, rgba(35,5,5,0.75) 0%, transparent 68%);
+  animation: smkBk 14s ease-out 0s infinite;
+}
+.smk-b2 {
+  background: radial-gradient(ellipse at 30% 100%, rgba(20,0,0,0.6) 0%, transparent 62%);
+  animation: smkBk 18s ease-out 4s infinite;
+  left: -5%;
+}
+.smk-b3 {
+  background: radial-gradient(ellipse at 65% 100%, rgba(15,15,15,0.65) 0%, transparent 60%);
+  animation: smkBk 11s ease-out 8s infinite;
+  left: 5%;
+}
+@keyframes smkBk {
+  0%   { opacity: 0; transform: translateY(0) scaleX(1); }
+  18%  { opacity: 0.85; }
+  100% { opacity: 0; transform: translateY(-42%) scaleX(1.35); }
+}
+
 /* Logo — equidistant between glass pill and bald man's head */
 .hero__logo-corner {
   position: absolute;

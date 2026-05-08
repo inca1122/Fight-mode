@@ -50,6 +50,13 @@ export default function Home() {
       <section className="hero" id="hero">
         <div className="hero__bg"></div>
 
+        {/* Smoke behind people */}
+        <div className="hero__smoke-back" aria-hidden="true">
+          <div className="smk-b smk-b1"></div>
+          <div className="smk-b smk-b2"></div>
+          <div className="smk-b smk-b3"></div>
+        </div>
+
         {/* People image — fades into dark background */}
         <div className="hero__people">
           <img src={`${BASE}images/people-main.png`} alt="" className="hero__people-img" />
