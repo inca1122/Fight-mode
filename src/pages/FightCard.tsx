@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FIGHTS } from '../data/fights';
+const BASE = import.meta.env.BASE_URL;
 
 export default function FightCard() {
   return (
@@ -17,6 +18,7 @@ export default function FightCard() {
             <div className="eposter__bg-num">2</div>
             <p className="eposter__ed">Fight Mode — Edycja 2</p>
             <h2 className="eposter__name">POZNAŃ<br />23.05.2026</h2>
+            <img src={`${BASE}images/gala-photo.jpg`} alt="Fight Mode 2" className="eposter__photo" />
             <div className="eposter__dets">
               <div className="edet"><div className="edet__val">23 Maja</div><div className="edet__lbl">Data</div></div>
               <div className="edet-sep"></div>
@@ -34,9 +36,9 @@ export default function FightCard() {
             {FIGHTS.map(f => (
               <div key={f.id} className={`frow${f.isMain ? ' main' : ''}`}>
                 <div><div className="fn">{f.redCorner}</div></div>
-                <div>
+                <div className="fmid">
+                  <span className="fbadge fblabel">{f.label ?? ' '}</span>
                   <span className="fvs">VS</span>
-                  {f.label && <span className="fbadge">{f.label}</span>}
                   <div className="fwt">{f.weightClass}</div>
                 </div>
                 <div><div className="fn r">{f.blueCorner}</div></div>

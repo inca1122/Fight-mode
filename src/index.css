@@ -722,17 +722,17 @@ a{text-decoration:none;color:inherit}
   border: 1px solid rgba(255,85,0,.35);
 }
 .hero__sub { text-shadow: 0 2px 12px rgba(0,0,0,0.9); }
-.cd-num { text-shadow: 0 2px 16px rgba(0,0,0,0.8); }
+.cd-num { color: #fff !important; text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.5); }
 /* People image — PNG with transparent bg, fills hero */
 .hero__people-img {
   opacity: 1 !important;
   object-fit: cover;
   object-position: center top;
 }
-/* Logo — centered below navbar, above fighters' heads */
+/* Logo — centered between navbar and bald man's head */
 .hero__logo-corner {
   position: absolute;
-  top: 76px;
+  top: 115px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -740,22 +740,43 @@ a{text-decoration:none;color:inherit}
   text-align: center;
 }
 .hero__logo-corner-img {
-  width: clamp(240px, 32vw, 480px);
+  width: clamp(240px, 30vw, 460px);
   max-width: 80vw;
   display: block;
   filter: drop-shadow(0 0 40px rgba(255,80,0,.5));
   animation: glow 3s ease-in-out infinite;
 }
-/* Hero content — pinned to bottom so it doesn't cover faces */
+/* Hero content — higher up, not covering faces */
 .hero__c {
   position: absolute !important;
-  bottom: 48px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   top: auto !important;
   width: 100%;
-  gap: 14px !important;
+  gap: 10px !important;
 }
+/* Fight card center column — consistent VS alignment */
+.fmid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+.fblabel {
+  min-height: 14px;
+}
+/* Gala photo in eposter */
+.eposter__photo {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin: 4px 0;
+}
+/* Ticker — no label */
+.ticker__lbl { display: none; }
 /* Remove bg-name from fc-photo (already removed in JSX) */
 .fc-bg-name { display: none; }
 /* Fighter card photo bg — dark to match site */
