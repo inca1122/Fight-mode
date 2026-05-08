@@ -12,6 +12,7 @@ export default function Zawodnicy() {
   const [hoveredId, setHoveredId] = useState<string | null>(null);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [filter, setFilter] = useState<'all' | 'main' | 'undercard' | 'kobiety'>('all');
   const pageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -44,19 +45,28 @@ export default function Zawodnicy() {
 
       {/* FILTER PILLS */}
       <div style={{ padding: '24px 60px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-        {['WSZYSCY', 'MAIN CARD', 'UNDERCARD', 'KOBIETY'].map((label, i) => (
-          <button key={label} style={{
-            fontFamily: 'var(--fc)', fontSize: '11px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase',
-            padding: '8px 18px', background: i === 0 ? '#C8202A' : 'transparent',
-            border: `1px solid ${i === 0 ? '#C8202A' : '#D4A434'}`,
-            color: '#fff', cursor: 'pointer'
-          }}>{label}</button>
-        ))}
+        {([['all', 'WSZYSCY'], ['main', 'MAIN CARD'], ['undercard', 'UNDERCARD'], ['kobiety', 'KOBIETY']] as const).map(([key, label]) => {
+          const active = filter === key;
+          return (
+            <button key={key} onClick={() => setFilter(key)} style={{
+              fontFamily: 'var(--fc)', fontSize: '11px', fontWeight: 700, letterSpacing: '3px', textTransform: 'uppercase',
+              padding: '8px 18px', background: active ? '#C8202A' : 'transparent',
+              border: `1px solid ${active ? '#C8202A' : '#D4A434'}`,
+              color: '#fff', cursor: 'pointer', transition: 'background .15s, border-color .15s'
+            }}>{label}</button>
+          );
+        })}
       </div>
 
       {/* FIGHTER CARDS */}
       <div style={{ padding: '0 60px 80px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
-        {sorted.map((fighter, idx) => {
+        {sorted.filter(f => {
+          if (filter === 'all') return true;
+          if (filter === 'kobiety') return f.gender === 'F';
+          if (filter === 'main') return f.cardType === 'main' || f.cardType === 'co-main';
+          if (filter === 'undercard') return f.cardType === 'undercard';
+          return true;
+        }).map((fighter, idx) => {
           const fullName = `${fighter.firstName} ${fighter.lastName}`;
           const opponent = opponentMap.get(fullName) ?? 'TBA';
           const panelVisible = isMobile ? expandedId === fighter.id : hoveredId === fighter.id;
