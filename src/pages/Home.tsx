@@ -131,11 +131,11 @@ export default function Home() {
           </a>
           <div className="partners__sep" />
           <a href="https://pitbull.pl" target="_blank" rel="noreferrer" className="partner-card">
-            <span className="plogo-text plogo-text--pitbull">PITBULL<sup>®</sup></span>
+            <img src={`${BASE}images/sponsors/pitbull-logo.png`} alt="Pitbull" className="plogo plogo--pitbull" />
           </a>
           <div className="partners__sep" />
           <a href="https://gastropaczka.pl" target="_blank" rel="noreferrer" className="partner-card">
-            <span className="plogo-text plogo-text--gastro">GASTRO<br/>PACZKA</span>
+            <img src={`${BASE}images/sponsors/gastro-logo.png`} alt="Gastro Paczka" className="plogo plogo--gastro" />
           </a>
         </div>
       </section>
