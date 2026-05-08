@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom';
-import { usePpvModal } from './PpvModal';
-const EBILET = 'https://www.ebilet.pl/sport/sporty-walki/fight-mode';
 
 export default function Footer() {
-  const openPpv = usePpvModal();
   return (
     <footer className="footer" id="kontakt">
       <div className="footer__top">
@@ -24,33 +21,27 @@ export default function Footer() {
             </a>
           </div>
         </div>
-        <div>
-          <p className="f-ct">Nawigacja</p>
-          <ul className="f-ul">
-            <li><Link to="/">Strona główna</Link></li>
-            <li><Link to="/zawodnicy">Zawodnicy</Link></li>
-            <li><Link to="/karta-walk">Karta Walk</Link></li>
-            <li><Link to="/aktualnosci">Aktualności</Link></li>
-            <li><button className="f-ppv-btn" onClick={openPpv}>Oglądaj PPV</button></li>
-          </ul>
-        </div>
-        <div>
-          <p className="f-ct">Bilety &amp; PPV</p>
-          <ul className="f-ul">
-            <li><a href={EBILET} target="_blank" rel="noreferrer">Kup bilet — ebilet.pl</a></li>
-            <li><button className="f-ppv-btn" onClick={openPpv}>PPV online</button></li>
-            <li><Link to="/karta-walk">Fight Mode</Link></li>
-          </ul>
-        </div>
-        <div>
-          <p className="f-ct">Kontakt</p>
-          <ul className="f-ul">
-            <li><a href="mailto:kontakt@fightmode.pl">kontakt@fightmode.pl</a></li>
-            <li><a href="#">Media / Press</a></li>
-            <li><a href="#">Sponsoring</a></li>
-          </ul>
+
+        <div className="f-stats">
+          <div className="f-stat">
+            <span className="f-stat__num">#1</span>
+            <span className="f-stat__lbl">Federacja Bare Knuckle<br />w Polsce</span>
+          </div>
+          <div className="f-stat">
+            <span className="f-stat__num">19</span>
+            <span className="f-stat__lbl">Zawodników<br />na karcie</span>
+          </div>
+          <div className="f-stat">
+            <span className="f-stat__num">10</span>
+            <span className="f-stat__lbl">Walk<br />w programie</span>
+          </div>
+          <div className="f-stat">
+            <span className="f-stat__num">2026</span>
+            <span className="f-stat__lbl">Rok<br />inauguracji</span>
+          </div>
         </div>
       </div>
+
       <div className="footer__bot">
         <p className="f-copy">© 2026 Fight Mode — Bare Knuckle Poland. Wszelkie prawa zastrzeżone.</p>
         <div className="f-leg">
