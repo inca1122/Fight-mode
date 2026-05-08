@@ -38,7 +38,6 @@ export default function Navbar() {
             <li><Link to="/karta-walk">Karta Walk</Link></li>
             <li><Link to="/aktualnosci">Aktualności</Link></li>
             <li><Link to="/#kontakt-form">Kontakt</Link></li>
-            <li><button className="nav__ppv-btn" onClick={openPpv}>PPV</button></li>
           </ul>
         </nav>
 
