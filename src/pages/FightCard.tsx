@@ -15,10 +15,10 @@ export default function FightCard() {
         </div>
         <div className="event-grid">
           <div className="eposter">
+            <img src={`${BASE}images/gala-photo.jpg`} alt="" className="eposter__bg-photo" />
             <div className="eposter__bg-num">2</div>
             <p className="eposter__ed">Fight Mode — Edycja 2</p>
             <h2 className="eposter__name">POZNAŃ<br />23.05.2026</h2>
-            <img src={`${BASE}images/gala-photo.jpg`} alt="Fight Mode 2" className="eposter__photo" />
             <div className="eposter__dets">
               <div className="edet"><div className="edet__val">23 Maja</div><div className="edet__lbl">Data</div></div>
               <div className="edet-sep"></div>

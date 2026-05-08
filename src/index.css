@@ -722,17 +722,17 @@ a{text-decoration:none;color:inherit}
   border: 1px solid rgba(255,85,0,.35);
 }
 .hero__sub { text-shadow: 0 2px 12px rgba(0,0,0,0.9); }
-.cd-num { color: #fff !important; text-shadow: 0 2px 14px rgba(0,0,0,0.6), 0 0 30px rgba(0,0,0,0.5); }
+.cd-num { background: none !important; -webkit-background-clip: unset !important; background-clip: unset !important; -webkit-text-fill-color: #fff !important; color: #fff !important; text-shadow: 3px 4px 10px rgba(0,0,0,0.9), 0 2px 4px rgba(0,0,0,0.8); }
 /* People image — PNG with transparent bg, fills hero */
 .hero__people-img {
   opacity: 1 !important;
   object-fit: cover;
   object-position: center top;
 }
-/* Logo — centered between navbar and bald man's head */
+/* Logo — equidistant between glass pill and bald man's head */
 .hero__logo-corner {
   position: absolute;
-  top: 115px;
+  top: 74px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 3;
@@ -740,8 +740,9 @@ a{text-decoration:none;color:inherit}
   text-align: center;
 }
 .hero__logo-corner-img {
-  width: clamp(240px, 30vw, 460px);
-  max-width: 80vw;
+  height: clamp(65px, 8vw, 110px);
+  width: auto;
+  max-width: 60vw;
   display: block;
   filter: drop-shadow(0 0 40px rgba(255,80,0,.5));
   animation: glow 3s ease-in-out infinite;
@@ -767,13 +768,20 @@ a{text-decoration:none;color:inherit}
 .fblabel {
   min-height: 14px;
 }
-/* Gala photo in eposter */
-.eposter__photo {
+/* Gala photo — full background of eposter */
+.eposter__bg-photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  max-height: 180px;
-  object-fit: contain;
-  border-radius: 4px;
-  margin: 4px 0;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.22;
+  pointer-events: none;
+}
+.eposter > *:not(.eposter__bg-photo):not(.eposter__bg-num) {
+  position: relative;
+  z-index: 1;
 }
 /* Ticker — no label */
 .ticker__lbl { display: none; }

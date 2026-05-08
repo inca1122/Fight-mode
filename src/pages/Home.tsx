@@ -128,10 +128,10 @@ export default function Home() {
         </div>
         <div className="event-grid">
           <div className="eposter rv fl">
+            <img src={`${BASE}images/gala-photo.jpg`} alt="" className="eposter__bg-photo" />
             <div className="eposter__bg-num">2</div>
             <p className="eposter__ed">Fight Mode — Edycja 2</p>
             <h2 className="eposter__name">POZNAŃ<br />23.05.2026</h2>
-            <img src={`${BASE}images/gala-photo.jpg`} alt="Fight Mode 2" className="eposter__photo" />
             <div className="eposter__dets">
               <div className="edet"><div className="edet__val">23 Maja</div><div className="edet__lbl">Data</div></div>
               <div className="edet-sep"></div>
@@ -244,13 +244,15 @@ export default function Home() {
         <p className="sponsors__lbl">Oficjalni Sponsorzy Fight Mode</p>
         <div className="sponsors__row">
           <a href="https://www.efortuna.pl" target="_blank" rel="noreferrer" className="sp" title="Fortuna">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Fortuna_logo.svg/320px-Fortuna_logo.svg.png" alt="Fortuna" style={{ height: '51px', width: '210px', objectFit: 'contain' }} />
+            <img src={`${BASE}images/sponsors/logo-fortuna.png`} alt="Fortuna" style={{ height: '44px', objectFit: 'contain' }} />
           </a>
           <div className="sp">
-            <img src={`${BASE}images/sponsors/pitbull.svg`} alt="Pitbull" style={{ height: '40px' }} />
+            <img src={`${BASE}images/sponsors/pitbull-new.png`} alt="Pitbull Energy Drink" style={{ height: '52px', objectFit: 'contain' }} />
           </div>
           <div className="sp">
-            <div className="sp-ph">[Logo Sponsora]</div>
+            <div style={{ fontFamily: 'var(--fc)', fontWeight: 900, fontSize: 'clamp(18px,2vw,28px)', letterSpacing: '0px', textTransform: 'uppercase', color: '#fff', lineHeight: 1.05, textAlign: 'center' }}>
+              GASTRO<br />PACZKA
+            </div>
           </div>
         </div>
       </section>
