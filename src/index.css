@@ -208,6 +208,40 @@ a{text-decoration:none;color:inherit}
   .eposter{padding:32px}
 }
 
+/* ── MOBILE MENU ── */
+.mobile-menu{display:none}
+@media(max-width:1024px){
+  .nav__glass{display:none}
+  .mobile-menu{
+    display:block;position:fixed;inset:0;z-index:998;
+    background:rgba(0,0,0,.55);
+  }
+  .mobile-menu nav{
+    position:absolute;top:68px;left:0;right:0;
+    background:rgba(8,8,8,.99);border-bottom:1px solid var(--border);
+    display:flex;flex-direction:column;
+  }
+  .mobile-menu nav a,
+  .mobile-menu nav .nav__ppv-btn{
+    font-family:var(--fc);font-weight:700;font-size:15px;
+    letter-spacing:2px;text-transform:uppercase;
+    color:rgba(255,255,255,.85);padding:18px 24px;
+    border-bottom:1px solid var(--border);display:block;
+    width:100%;text-align:left;background:none;
+    border-left:none;border-right:none;border-top:none;cursor:pointer;
+    transition:color .2s,background .2s;
+  }
+  .mobile-menu nav a:last-child,
+  .mobile-menu nav .nav__ppv-btn:last-of-type{border-bottom:none}
+  .mobile-menu nav a:hover,.mobile-menu nav .nav__ppv-btn:hover{
+    color:#fff;background:rgba(200,32,42,.12);
+  }
+  .mobile-menu__bilet{color:var(--red)!important;font-weight:900!important}
+  .hbg--open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hbg--open span:nth-child(2){opacity:0;transform:scaleX(0)}
+  .hbg--open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+
 /* ── PAGE WRAPPER ── */
 .page-wrapper {
   padding-top: 68px;
