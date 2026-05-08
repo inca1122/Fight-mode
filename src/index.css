@@ -729,6 +729,21 @@ a{text-decoration:none;color:inherit}
   object-fit: cover;
   object-position: center top;
 }
+/* Logo corner — upper left of hero */
+.hero__logo-corner {
+  position: absolute;
+  top: 88px;
+  left: clamp(20px, 4vw, 60px);
+  z-index: 3;
+  pointer-events: none;
+}
+.hero__logo-corner-img {
+  width: clamp(160px, 20vw, 280px);
+  max-width: 30vw;
+  display: block;
+  filter: drop-shadow(0 0 40px rgba(255,80,0,.5));
+  animation: glow 3s ease-in-out infinite;
+}
 /* Remove bg-name from fc-photo (already removed in JSX) */
 .fc-bg-name { display: none; }
 /* Fighter card photo bg — dark to match site */

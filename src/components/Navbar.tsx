@@ -15,9 +15,9 @@ export default function Navbar() {
 
   return (
     <header className={`nav${scrolled ? ' s' : ''}`} id="nav">
-      {/* Logo F1 — left */}
-      <Link to="/" className="nav__logo">
-        <img src={`${BASE}images/F1.jpg`} alt="Fight Mode" style={{ height: '46px', width: '46px', objectFit: 'cover', borderRadius: '4px' }} />
+      {/* F logo — visible only when scrolled */}
+      <Link to="/" className="nav__logo" style={{ opacity: scrolled ? 1 : 0, pointerEvents: scrolled ? 'auto' : 'none', transition: 'opacity 0.35s' }}>
+        <img src={`${BASE}images/F-logo.png`} alt="Fight Mode" style={{ height: '46px', width: '46px', objectFit: 'contain' }} />
       </Link>
 
       {/* Glass pill nav links — center */}
