@@ -740,8 +740,8 @@ a{text-decoration:none;color:inherit}
   pointer-events: none;
   background: linear-gradient(to top,
     rgba(210,205,200,0.50) 0%,
-    rgba(195,190,185,0.28) 35%,
-    transparent 100%);
+    rgba(210,205,200,0.28) 35%,
+    rgba(210,205,200,0) 100%);
 }
 .smk-b {
   position: absolute;
@@ -751,17 +751,17 @@ a{text-decoration:none;color:inherit}
 }
 .smk-b1 {
   width: 65%; height: 70%; left: 2%;
-  background: radial-gradient(ellipse at 50% 100%, rgba(235,230,225,0.75) 0%, transparent 68%);
+  background: radial-gradient(ellipse at 50% 100%, rgba(235,230,225,0.75) 0%, rgba(235,230,225,0) 68%);
   animation: smkRise 8s ease-out 0s infinite;
 }
 .smk-b2 {
   width: 55%; height: 80%; left: 25%;
-  background: radial-gradient(ellipse at 50% 100%, rgba(230,225,220,0.70) 0%, transparent 66%);
+  background: radial-gradient(ellipse at 50% 100%, rgba(230,225,220,0.70) 0%, rgba(230,225,220,0) 66%);
   animation: smkRise 11s ease-out 1.5s infinite;
 }
 .smk-b3 {
   width: 60%; height: 65%; left: 40%;
-  background: radial-gradient(ellipse at 50% 100%, rgba(225,220,215,0.70) 0%, transparent 68%);
+  background: radial-gradient(ellipse at 50% 100%, rgba(225,220,215,0.70) 0%, rgba(225,220,215,0) 68%);
   animation: smkRise 9.5s ease-out 4s infinite;
 }
 @keyframes smkRise {
