@@ -57,7 +57,7 @@ export default function Home() {
         {/* People image */}
         <div className="hero__people">
           <img src={`${BASE}images/people-main.webp`} alt="" className="hero__people-img hero__people-img--desktop" fetchPriority="high" decoding="async" />
-          <img src={`${BASE}images/people-main-mobile.jpg`} alt="" className="hero__people-img hero__people-img--mobile" loading="eager" decoding="async" />
+          <img src={`${BASE}images/people-main-mobile.webp`} alt="" className="hero__people-img hero__people-img--mobile" loading="eager" decoding="async" />
         </div>
 
         {/* Smoke rising from bottom */}
