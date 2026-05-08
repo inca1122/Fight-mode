@@ -809,8 +809,10 @@ a{text-decoration:none;color:inherit}
   background: #111115;
   border: 1px solid #222228;
   width: min(480px, calc(100vw - 32px));
-  padding: 52px 44px 44px;
+  padding: 52px 24px 36px;
   text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
   animation: ppvmUp .28s cubic-bezier(.22,1,.36,1) both;
 }
 @keyframes ppvmUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
@@ -826,11 +828,13 @@ a{text-decoration:none;color:inherit}
 }
 .ppvm__title {
   font-family: var(--fc); font-weight: 900;
-  font-size: clamp(52px,10vw,88px); text-transform: uppercase;
+  font-size: clamp(40px,8vw,72px); text-transform: uppercase;
   line-height: .9; letter-spacing: -2px; color: #fff; margin-bottom: 22px;
+  word-break: break-word;
 }
 .ppvm__text {
   font-family: var(--fs); font-size: 14px; line-height: 1.65; color: #777; margin-bottom: 24px;
+  word-break: break-word;
 }
 .ppvm__socials {
   font-family: var(--fc); font-size: 11px; font-weight: 700;
