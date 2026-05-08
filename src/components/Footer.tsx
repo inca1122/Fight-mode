@@ -10,35 +10,12 @@ export default function Footer() {
   return (
     <footer className="footer" id="footer">
 
-      {/* STATS BAR */}
-      <div className="f-statsbar">
-        <div className="f-sb-item">
-          <span className="f-sb-num">#1</span>
-          <span className="f-sb-lbl">Federacja Bare Knuckle w Polsce</span>
-        </div>
-        <div className="f-sb-sep" />
-        <div className="f-sb-item">
-          <span className="f-sb-num">19</span>
-          <span className="f-sb-lbl">Zawodników na karcie</span>
-        </div>
-        <div className="f-sb-sep" />
-        <div className="f-sb-item">
-          <span className="f-sb-num">10</span>
-          <span className="f-sb-lbl">Walk w programie</span>
-        </div>
-        <div className="f-sb-sep" />
-        <div className="f-sb-item">
-          <span className="f-sb-num">2026</span>
-          <span className="f-sb-lbl">Rok inauguracji</span>
-        </div>
-      </div>
-
       {/* MAIN */}
       <div className="footer__main">
 
         {/* BRAND */}
         <div className="f-brand">
-          <img src={`${BASE}images/F-logo.png`} alt="Fight Mode" className="f-logo-img" />
+          <img src={`${BASE}images/logo.png`} alt="Fight Mode" className="f-logo-img" />
           <p className="f-desc">Fight Mode to pierwsza w Polsce profesjonalna federacja walk na gołe pięści. Surowa, bezpośrednia i bez kompromisów.</p>
           <div className="f-soc">
             <a href="https://www.youtube.com/@Fightmode.official" target="_blank" rel="noreferrer" className="f-si">
