@@ -732,39 +732,42 @@ a{text-decoration:none;color:inherit}
 /* ── SMOKE BEHIND PEOPLE ── */
 .hero__smoke-back {
   position: absolute;
-  inset: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
   z-index: 2;
   pointer-events: none;
-  overflow: hidden;
+  background: linear-gradient(to top,
+    rgba(210,205,200,0.50) 0%,
+    rgba(195,190,185,0.28) 35%,
+    transparent 100%);
 }
 .smk-b {
   position: absolute;
-  bottom: -10%;
-  left: -20%;
-  width: 140%;
-  height: 55%;
+  bottom: 0;
   border-radius: 50%;
-  opacity: 0;
-  filter: blur(50px);
+  filter: blur(25px);
 }
 .smk-b1 {
-  background: radial-gradient(ellipse at 50% 100%, rgba(220,200,190,0.28) 0%, transparent 65%);
-  animation: smkBk 13s ease-out 0s infinite;
+  width: 65%; height: 70%; left: 2%;
+  background: radial-gradient(ellipse at 50% 100%, rgba(235,230,225,0.75) 0%, transparent 68%);
+  animation: smkRise 8s ease-out 0s infinite;
 }
 .smk-b2 {
-  background: radial-gradient(ellipse at 35% 100%, rgba(200,170,150,0.22) 0%, transparent 60%);
-  animation: smkBk 17s ease-out 3.5s infinite;
-  left: -5%;
+  width: 55%; height: 80%; left: 25%;
+  background: radial-gradient(ellipse at 50% 100%, rgba(230,225,220,0.70) 0%, transparent 66%);
+  animation: smkRise 11s ease-out 1.5s infinite;
 }
 .smk-b3 {
-  background: radial-gradient(ellipse at 65% 100%, rgba(210,185,170,0.25) 0%, transparent 62%);
-  animation: smkBk 10s ease-out 7s infinite;
-  left: 5%;
+  width: 60%; height: 65%; left: 40%;
+  background: radial-gradient(ellipse at 50% 100%, rgba(225,220,215,0.70) 0%, transparent 68%);
+  animation: smkRise 9.5s ease-out 4s infinite;
 }
-@keyframes smkBk {
-  0%   { opacity: 0; transform: translateY(0) scaleX(1); }
+@keyframes smkRise {
+  0%   { opacity: 0.55; transform: translateY(0) scaleX(1); }
   20%  { opacity: 1; }
-  100% { opacity: 0; transform: translateY(-38%) scaleX(1.3); }
+  100% { opacity: 0;    transform: translateY(-60%) scaleX(1.6); }
 }
 
 /* Logo — equidistant between glass pill and bald man's head */
