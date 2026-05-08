@@ -733,56 +733,39 @@ a{text-decoration:none;color:inherit}
 .hero__smoke-back {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  height: 55%;
+  height: 60%;
   z-index: 2;
   pointer-events: none;
-  /* hot glow at the base */
-  background: radial-gradient(ellipse 65% 14% at 40% 100%, rgba(220,55,0,0.32) 0%, rgba(220,55,0,0) 100%);
-}
-.hero__smoke-back::before,
-.hero__smoke-back::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  border-radius: 40% 40% 0 0;
-  filter: blur(7px);
-}
-.hero__smoke-back::before {
-  width: 5%; height: 58%; left: 22%;
-  background: linear-gradient(to top, rgba(255,248,235,0.82) 0%, rgba(255,248,235,0.35) 55%, rgba(255,248,235,0) 100%);
-  animation: smkWisp 7s ease-out 0.9s infinite;
-}
-.hero__smoke-back::after {
-  width: 4%; height: 48%; left: 58%;
-  background: linear-gradient(to top, rgba(255,248,235,0.78) 0%, rgba(255,248,235,0.30) 52%, rgba(255,248,235,0) 100%);
-  animation: smkWisp 5.8s ease-out 3.6s infinite;
+  /* permanent visible base: heat glow + grey haze at floor */
+  background:
+    radial-gradient(ellipse 80% 18% at 42% 100%, rgba(220,55,0,0.40) 0%, rgba(220,55,0,0) 100%),
+    linear-gradient(to top, rgba(200,195,190,0.55) 0%, rgba(200,195,190,0.20) 18%, rgba(200,195,190,0) 40%);
 }
 .smk-b {
   position: absolute;
   bottom: 0;
-  border-radius: 40% 40% 0 0;
-  filter: blur(7px);
+  border-radius: 45% 45% 20% 20%;
+  filter: blur(10px);
 }
 .smk-b1 {
-  width: 5%; height: 68%; left: 10%;
-  background: linear-gradient(to top, rgba(255,248,230,0.88) 0%, rgba(255,248,230,0.42) 48%, rgba(255,248,230,0) 100%);
+  width: 12%; height: 70%; left: 8%;
+  background: linear-gradient(to top, rgba(255,252,245,0.95) 0%, rgba(255,252,245,0.55) 35%, rgba(255,252,245,0) 100%);
   animation: smkWisp 6s ease-out 0s infinite;
 }
 .smk-b2 {
-  width: 6%; height: 72%; left: 38%;
-  background: linear-gradient(to top, rgba(255,250,240,0.86) 0%, rgba(255,250,240,0.38) 50%, rgba(255,250,240,0) 100%);
-  animation: smkWisp 8s ease-out 2s infinite;
+  width: 14%; height: 78%; left: 36%;
+  background: linear-gradient(to top, rgba(255,253,248,0.92) 0%, rgba(255,253,248,0.50) 38%, rgba(255,253,248,0) 100%);
+  animation: smkWisp 8.5s ease-out 2s infinite;
 }
 .smk-b3 {
-  width: 4.5%; height: 62%; left: 68%;
-  background: linear-gradient(to top, rgba(255,248,235,0.84) 0%, rgba(255,248,235,0.36) 47%, rgba(255,248,235,0) 100%);
-  animation: smkWisp 6.5s ease-out 4.2s infinite;
+  width: 11%; height: 65%; left: 68%;
+  background: linear-gradient(to top, rgba(255,251,243,0.90) 0%, rgba(255,251,243,0.48) 36%, rgba(255,251,243,0) 100%);
+  animation: smkWisp 7s ease-out 4.5s infinite;
 }
 @keyframes smkWisp {
-  0%   { opacity: 0;   transform: translateY(0)    scaleX(1)   rotate(0deg); }
-  8%   { opacity: 1; }
-  50%  { opacity: 0.75; transform: translateY(-36%) scaleX(1.5) rotate(-2deg); }
-  100% { opacity: 0;   transform: translateY(-78%) scaleX(2.4) rotate(5deg); }
+  0%   { opacity: 0.85; transform: translateY(0)    scaleX(1)   rotate(0deg); }
+  40%  { opacity: 1;    transform: translateY(-28%) scaleX(1.4) rotate(-2deg); }
+  100% { opacity: 0;    transform: translateY(-70%) scaleX(2.2) rotate(5deg); }
 }
 
 /* Logo — equidistant between glass pill and bald man's head */
