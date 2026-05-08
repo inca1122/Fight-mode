@@ -740,7 +740,7 @@ a{text-decoration:none;color:inherit}
   text-align: center;
 }
 .hero__logo-corner-img {
-  height: clamp(120px, 16vw, 220px);
+  height: clamp(160px, 22vw, 320px);
   width: auto;
   max-width: 82vw;
   display: block;
